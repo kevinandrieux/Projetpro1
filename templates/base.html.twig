@@ -3,71 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-
-        <!--                                   CDN import                                       -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-        {% block stylesheets %}{% endblock %}
-
+        {% block stylesheets %}
+        <link rel="stylesheet" href="style.css">
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        <header id="header">
-            <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-                <a class="navbar-brand" href="{{ path('home') }}">Accueil</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse flex-row-reverse" id="collapsibleNavbar">
-                    <div class="row nav-fed">
-                        <ul class="row navbar-nav nav-fed">
-                            <li class="col-2 nav-item dropdown">
-                                <a class="nav-link dropdown-toggle {% if current_menu is defined and current_menu == 'active'%}active
-                            {% endif %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false" href="#">La Fédération</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#}">Qui sommes-nous ?</a>
-                                    <a class="dropdown-item" href="#">Notre équipe</a>
-                                    <a class="dropdown-item" href="#">Programme Sport</a>
-                                    <a class="dropdown-item" href="#">Nos partenaires</a>
-                                    <a class="dropdown-item" href="#">OTAN, en savoir plus</a>
-                                </div>
-                            </li>
-                            <li class="col-1 nav-item">
-                                <a class="nav-link {% if current_menu_medias is defined and current_menu_medias == 'active'%}active
-                            {% endif %}" href="#">Médias</a>
-                            </li>
-                            <li class="col-1 nav-item">
-                                <a class="nav-link {% if current_menu_shop is defined and current_menu_shop == 'active'%}active
-                            {% endif %}" href="#">Boutique</a>
-                            </li>
-                            <li class="col-1 nav-item">
-                                <a class="nav-link {% if current_menu_join is defined and current_menu_join == 'active'%}active
-                            {% endif %}" href="#">Adhérer</a>
-                            </li>
-                            <li class="col-1 nav-item">
-                                <a class="nav-link {% if current_menu_support is defined and current_menu_support == 'active'%}active
-                            {% endif %}" href="#">Dons</a>
-                            </li>
-                            <li class="col-1 nav-item">
-                                <a class="nav-link {% if current_menu_contact is defined and current_menu_contact == 'active'%}active
-                            {% endif %}" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

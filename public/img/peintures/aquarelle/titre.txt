@@ -1,0 +1,33 @@
+1 voilier peche
+2 bateau peche
+3 honfleur capitainerie
+4 bateaux baie d authie
+5 baie d authie
+6 ancrage madelon
+7 bateau berckois
+8 berck cerfs volants 1
+9 berck cerfs volants 2
+10 berck cerfs volants 3
+11 retour peche
+12 debarquement poissons
+13 plage berck
+14 barfleur
+15 bateau berckois 1
+16 bateau berckois 2
+17 bateau berckois 3
+18 promenade cheval
+19 barfleur maree haute
+20 marine parchemin
+21 groffliers les pins
+22 flobart plage
+23 flobart peche
+24 montreuil sur mer
+25 hesdin
+26 lille grand place
+27 coucher de soleil
+28 epaves
+29 bateauberckois waben
+30 connaissance partagee
+31 chapelle saint michel
+32 rosier
+
