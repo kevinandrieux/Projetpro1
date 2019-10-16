@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une peinture{% endblock %}
+
+{% block body %}
+    <h1>Ajouter une peinture</h1>
+
+    {{ include('admin/painting/_form.html.twig') }}
+
+    <a class="btn btn-secondary" href="{{ path('painting_index') }}">Retour à la liste</a>
+{% endblock %}

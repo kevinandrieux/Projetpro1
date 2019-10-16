@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche complète{% endblock %}
+
+{% block body %}
+    <h1>Fiche complète</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ egg.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ egg.type }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ egg.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ egg.description }}</td>
+            </tr>
+            <tr>
+                <th>Chemin source</th>
+                <td>{{ egg.img }}</td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ egg.category }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-secondary" href="{{ path('egg_index') }}">retour à la liste</a>
+
+    <a class="btn btn-primary" href="{{ path('egg_edit', {'id': egg.id}) }}">Editer</a>
+
+    {{ include('egg/_delete_form.html.twig') }}
+{% endblock %}

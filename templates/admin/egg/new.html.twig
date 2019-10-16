@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un oeuf{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un oeuf</h1>
+
+    {{ include('admin/egg/_form.html.twig') }}
+
+    <a class="btn btn-secondary" href="{{ path('egg_index') }}">Retour à la liste</a>
+{% endblock %}

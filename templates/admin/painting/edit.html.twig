@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edition{% endblock %}
+
+{% block body %}
+    <h1>Edition</h1>
+
+    {{ include('admin/painting/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <a class="btn btn-secondary" href="{{ path('painting_index') }}">Retour à la liste</a>
+
+    {{ include('admin/painting/_delete_form.html.twig') }}
+{% endblock %}

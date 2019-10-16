@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editer{% endblock %}
+
+{% block body %}
+    <h1>Editer</h1>
+
+    {{ include('admin/egg/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <a class="btn btn-secondary" href="{{ path('egg_index') }}">Retour à la liste</a>
+
+    {{ include('admin/egg/_delete_form.html.twig') }}
+{% endblock %}

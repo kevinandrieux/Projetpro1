@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Oeufs index{% endblock %}
+
+{% block body %}
+    <h1>Oeufs index</h1>
+    <a class="btn btn-secondary float-right" href="{{ path('egg_new') }}">Ajouter</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Chemin source</th>
+                <th>Categorie</th>
+                <th>Apperçu</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for egg in eggs %}
+            <tr>
+                <td>{{ egg.id }}</td>
+                <td>{{ egg.type }}</td>
+                <td>{{ egg.title }}</td>
+                <td>{{ egg.description }}</td>
+                <td>{{ egg.img }}</td>
+                <td>{{ egg.category }}</td>
+                <td><img src="{{ asset(egg.img) }}" alt="oeuvre de Mr Turgis" style="width: 10vw"></td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('egg_show', {'id': egg.id}) }}">Voir</a>
+                    <a class="btn btn-secondary" href="{{ path('egg_edit', {'id': egg.id}) }}">Editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Aucun résultat</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

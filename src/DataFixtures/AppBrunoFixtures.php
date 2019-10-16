@@ -46,7 +46,7 @@ class AppBrunoFixtures extends Fixture
             $oils[] = $classic;
         }
         // fantastic oil
-        for ($f = 1; $f <= 36; $f++){
+        for ($f = 1; $f <= 35; $f++){
             $fantastic = new Painting();
             $fantastic->setType('huile')
                 ->setTitle('Peinture fantastique '.$f)
@@ -107,13 +107,13 @@ class AppBrunoFixtures extends Fixture
         }
         //                 ADD Egg                                   //
         $eggs = [];
-        for ($e = 1; $e <= 206; $e++){
+        for ($e = 1; $e <= 205; $e++){
             $egg = new Egg();
             $egg->setType('oeuf')
                 ->setTitle('Oeuf '.$e)
                 ->setCategory('')
                 ->setDescription($faker->text(100))
-                ->setImg('img/oeuf/oeuf'.$e.'.jpg');
+                ->setImg('img/oeufs/oeuf'.$e.'.jpg');
 
             $manager->persist($egg);
             $eggs[] =  $egg;
