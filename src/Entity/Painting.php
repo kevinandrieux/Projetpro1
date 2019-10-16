@@ -36,6 +36,11 @@ class Painting
      */
     private $img;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $category;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Painting
     public function setImg(?string $img): self
     {
         $this->img = $img;
+
+        return $this;
+    }
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?string $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
