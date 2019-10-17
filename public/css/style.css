@@ -1,3 +1,5 @@
+
+
 body {
     background-image: url(../image/1062_double_dragon_stylise.jpg);
     background-repeat: no-repeat;
@@ -15,3 +17,84 @@ body {
     border-radius: 20%;
 
 }
+
+
+/* **********************************************************************************
+********************************* BRUNO'S CSS PART **********************************
+*********************************************************************************** */
+.jumbotron{
+    opacity: 0.7;
+}
+
+        /************************
+        *    ADMIN INDEX        *
+        ************************/
+
+    /* section choice */
+
+/* Float four columns side by side */
+.counter-column {
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+}
+
+.counter-row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.counter-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Annimation */
+.effect-chico{
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+}
+
+.effect-chico:hover {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* Responsive columns */
+@media screen and (max-width: 769px) {
+
+    .counter-column {
+        width: 50%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .counter-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Style the counter cards */
+.counter-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #002e54;
+    color: white;
+    border-radius: 8px;
+    margin: 1.4em;
+    height: 20vh;
+}
+
+.counter-fa {font-size:50px;}
+
+.fa-palette, .fa-egg, .fa-pencil-alt, .fa-studiovinari{color: #FFFFFF};
+
+.box-shadow{
+    box-shadow: 5px 4px 18px -5px #C4C4C4;}

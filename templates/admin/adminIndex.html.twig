@@ -3,8 +3,52 @@
 {% block title %}Accueil administration{% endblock %}
 
 {% block body %}
-    <div class="container d-flex titre">
-        <h1>Accueil administration</h1>
+
+    <div class="jumbotron">
+        <div class="text-center">
+            <h1>Accueil administration</h1>
+        </div>
+
+        <div class="text-left">
+            <h2 class="pt-4">Que souhaitez-vous faire?</h2>
+        </div>
     </div>
+
+    <!--------------- section choice ------------------------>
+
+    <div class="counter container">
+        <div class="counter-row">
+            <div class="counter-column ">
+                <div class="counter-card effect-chico">
+                    <a href="{{ path('painting_index') }}">
+                        <p><i class="counter-fa fas fa-palette"></i></p><h4 class="text-white">Gérer les peintures</h4></a>
+                </div>
+            </div>
+
+            <div class="counter-column">
+                <div class="counter-card effect-chico">
+                    <a href="{{ path('egg_index') }}">
+                        <p><i class="counter-fa fas fa-egg"></i></p><h4 class="text-white">Gérer les oeufs</h4></a>
+                </div>
+            </div>
+
+            <div class="counter-column ">
+                <div class="counter-card effect-chico">
+                    <a href="#">
+                        <p><i class="counter-fa fas fa-pencil-alt"></i></p><h4 class="text-white">Gérer les dessins</h4></a>
+                </div>
+            </div>
+
+            <div class="counter-column">
+                <div class="counter-card effect-chico">
+                    <a href="#">
+                        <p><i class="counter-fa fab fa-studiovinari"></i></p><h4 class="text-white">Gérer les sculptures</h4></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end choice -->
+
 
 {% endblock %}
