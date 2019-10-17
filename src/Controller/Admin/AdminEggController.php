@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/admin/egg")
  */
-class EggController extends AbstractController
+class AdminEggController extends AbstractController
 {
     /**
      * @Route("/", name="egg_index", methods={"GET"})

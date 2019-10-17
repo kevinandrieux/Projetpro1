@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/admin/painting")
  */
-class PaintingController extends AbstractController
+class AdminPaintingController extends AbstractController
 {
     /**
      * @Route("/", name="painting_index", methods={"GET"})
