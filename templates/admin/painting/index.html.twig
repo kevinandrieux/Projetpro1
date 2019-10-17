@@ -3,8 +3,21 @@
 {% block title %}Peintures index{% endblock %}
 
 {% block body %}
-    <h1>Peintures index</h1>
-    <a class="float-right btn btn-primary" href="{{ path('painting_new') }}">Ajouter</a>
+
+    <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
+
+    <div class="jumbotron">
+        <div class="text-center">
+            <h1 class="jumbotronTitle">Peinture index</h1>
+        </div>
+
+        <div class="text-left">
+            <h2 class="jumbotronTitle pt-4">Liste de toutes les peintures</h2>
+        </div>
+    </div>
+
+    <a class="float-right btn btn-primary mb-5 mt-5" href="{{ path('painting_new') }}">Ajouter</a>
+
     <table class="table">
         <thead>
             <tr>
