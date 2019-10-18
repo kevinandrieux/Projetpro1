@@ -4,6 +4,7 @@
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
 {% endblock %}
+{% block title %}Les peintures, gouache et aquarelles{% endblock %}
 
 {% block body %}
 
@@ -592,63 +593,11 @@
             </div>
 
         </div>
-    </div>
+    </div> <!-- end timeline -->
 
-    <!-- <div class="timeLine">
-            <div class="container">
-                <div class="lineHeader"></div>
-                <div class="lineFooter"></div>
-                <div class="item">
-                    <div class="caption">
-                    </div>
-                </div>
-                <div class="item pull-right">
-                    <div class="caption">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="caption">
-                    </div>
-                </div>
-                <div class="item pull-right">
-                    <div class="caption">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="caption">
-                    </div>
-                </div>
-                <div class="item pull-right">
-                    <div class="caption">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="caption">
-                    </div>
-                </div>
-                <div class="item pull-right">
-                    <div class="caption">
-                    </div>
-                </div>
-            </div>
-    </div> -->
     {% block javascripts %}
     {% endblock %}
     <script src="{{ asset('js/responsive_timeline/timeLine.js') }}"></script>
     <script src="{{ asset('js/responsive_timeline/script.js') }}"></script>
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
 
 {% endblock %}
