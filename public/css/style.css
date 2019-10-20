@@ -124,4 +124,8 @@ body {
     margin-top: 14vh;
     opacity: 0.9;
 }
+.realImage{
+    height: 100% !important;
+    max-height: 1000px!important;
+}
 /***************************** END BRUNO'S CSS PART *******************************/
