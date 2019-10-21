@@ -33,4 +33,22 @@ class PaintingController extends AbstractController{
     {
         return $this->render('painting/fantasticalOil.html.twig');
     }
+
+    /**
+     * @return Response
+     * @Route("huile_surrealiste", name="surrealistOil_show")
+     */
+    public function surrealistOil():Response
+    {
+        return $this->render('painting/surrealistOil.html.twig');
+    }
+
+    /**
+     * @return Response
+     * @Route("huile_laquee", name="laqueredOil_swhow")
+     */
+    public function laqueredOil():Response
+    {
+        return $this->render('painting/laqueredOil.html.twig');
+    }
 }

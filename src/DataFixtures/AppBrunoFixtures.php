@@ -21,7 +21,7 @@ class AppBrunoFixtures extends Fixture
 
         //                 ADD Watercolor (aquarelle)         //
         $watercolors = [];
-        for ($w = 1; $w <= 32; $w++){
+        for ($w = 1; $w <= 33; $w++){
             $watercolor = new Painting();
             $watercolor->setType('aquarelle')
                 ->setTitle('Peinture aquarelle '.$w)

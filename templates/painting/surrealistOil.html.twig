@@ -1,0 +1,386 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/responsive_timeline/style.css') }}">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+{% endblock %}
+{% block title %}Les peintures, de style 'Surréaliste'.{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotronClassicalOil text-white">
+        <div class="text-center">
+            <h1 class="jumbotronTitle">Les peintures à huile de style 'Surréaliste', 'Thérapeutique' et Portrait.</h1>
+        </div>
+
+        <div class="container">
+            <p class="jumbotronTitle explain pt-4">Peinture à huile.</p>
+            <p class="jumbotronTitle explain">
+                Jean de Bruges, peintre Flamand, est le premier qui ait employé l’huile dans la peinture.
+                La peinture à l’huile a plusieurs avantages sur les autres manières de peindre ; l’huile adoucit les couleurs qui y sont
+                détrempées, elles imitent mieux le naturel, et marquent plus fortement les ombres. Les tableaux peints à l’huile peuvent
+                se retoucher, mais très difficilement sans qu’il y paraisse au bout de certain temps, après qu’ils ont été finis et achevés. <br>
+                La peinture à l’huile est très bonne pour les tableaux de moyenne grandeur. On l’emploie cependant dans de grands ouvrages,
+                comme dans des coupoles, des galeries, mais l’humidité en détache des morceaux ce qui n’arrive point à la fresque. Les
+                meilleurs huiles qu’on puisse employer, sont l’huile de lin, l’huile de noix et l’huile d’oliette<br>
+                (Pernety – dictionnaire des arts – 1757).
+            </p>
+        </div><!-- end container -->
+
+    </div><!-- end jumbotron -->
+
+    <h1 style="text-align: center; color: white; margin-top:150px">Du classique, du surréaliste, de l'étrange, du curieux.</h1>
+
+    <div class="timeLine">
+        <div class="row">
+            <div class="lineHeader hidden-sm hidden-xs"></div>
+            <div class="lineFooter hidden-sm hidden-xs"></div>
+
+            <!-- img 1 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item" >
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">1</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP1.jpg') }}">
+                        <div class="title">
+                            <h2>Symbolique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">De la pêche au Golgotha.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 2 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">2</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP2.jpg') }}">
+                        <div class="title">
+                            <h2>Le créateur et ses créatures<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">
+                            Je n'imagine par que le créateur fut un être divin ni que la cause de l'apparition de la vie sur notre
+                            planète fut fortuite,par un arrangement tout aussi improbable de cellules, mais on peut tout aussi
+                            bien envisager que ce fut seulement un chercheur qui voulut faire de la manipulation génétique et qui
+                            prit la terre pour terrain d'expérience. il n'y aurait rien de divin  en ce cas. Mais ce qui dérange
+                            certains scientifiques ce serait de penser que certains êtres leurs sont ô combien supérieurs. Je
+                            ne suis pas darwiniste mais mais encore moins religieux, entre le dogmatisme des darwinistes et celui
+                            des religieux il y a de quoi placer un nombre incalculalre d'hypothèse.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 3 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">3</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP3.jpg') }}">
+                        <div class="title">
+                            <h2>Trois temps, féminité<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Les trois âges de la femme, les trois âges de la vie: jeune fille, femme, femme mûre.
+                            Chacune peut exprimer le désir et la jouissance d'un plaisir différent pleinement assumé.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 4 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">4</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP4.jpg') }}">
+                        <div class="title">
+                            <h2>Espoir en afrique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Afrique sècheresse et désespoir. <br>
+
+                            Le défrichage apporte parfois leur propre malheur au peuple, l'humidité n'étant plus retenue, moins de
+                            glace sur les monts, et moins d'eau lors de la fonte.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 5 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">5</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP5.jpg') }}">
+                        <div class="title">
+                            <h2>Surréaliste<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">L'artiste et sa création. <br>
+                            L'artiste voit se matérialiser la création créature qu'il vient de réaliser.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 6 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">6</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP6.jpg') }}">
+                        <div class="title">
+                            <h2>Pourquoi?<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Le vieil homme, un rabbin interroge le spectateur sur le pourquoi de cette haine, son regard pourtant ne condamne pas
+                            tant l'infamie qui frappe sa communauté le laisse dans un profond désarroi. Derrière au son d'une musique qui accueille
+                            les âmes perdues venant de subir  l'extermination le peuple se transforme comprenant enfin que depuis longtemps leur sort
+                            était scellé.  La douce musique des sphères de l'univers les atteint alors qu'ils se transforme en énergie libre, ils ne
+                            sont plus qu'esprit, atome ou étincelle dans l'univers.<br>
+                            Tout avait été dit, tout avait été écrit, certains ont alerté l'opinion, certains ont crié afin d'attirer l'attention.
+                            Rien n'y fit, d'un côté le refus de croire à de telles histoires ou l'absence de moyens pour fuir, de l'autre  une
+                            absence totale de compassion et certaines raisons qui ne furent points honorables. Certains dirent plus tard, on ne
+                            savait pas, c'est faux. Les politiques, les gens bien placés, les riches, les administrations, les dirigeants, tous
+                            savaient car certains avaient déjà alertés l'état. Il suffisait de lire ce qui avait été prévu pour savoir ;  mais
+                            il ne fallut pas l'écrire ni le dire ni le diffuser, de peur de faire paniquer une douce population qui aux dires de
+                            certains dirigeants, bien plus pleutres que leurs citoyens, ne croyaient pas à la  l'odieuse machination de leur
+                            voisin immédiat.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 7 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">7</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP7.jpg') }}">
+                        <div class="title">
+                            <h2>Autoportrait de l'artiste<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Autoportrait 38 ans. Tableaux de style Surréaliste/Portrait.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 8 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">8</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP8.jpg') }}">
+                        <div class="title">
+                            <h2>Voie lactée<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Une certaine idée de la féminité, ou la maternité en devenir. <br>
+
+                            Inspiré effectivement par une photo j'avais voulu reproduire ce corps "sans tête apparente" uniquement et spécifiquement,
+                            ainsi point de "c'est dégradant pour l'image de la femme", "elle n'est pas qu'un corps". Ici sans nul doute je n'ai
+                            représenté que le corps, faisan fi de la pensée et de l'intellectualité de la femme puisque c'est la féminité et la
+                            maternité en devenir que je voulais représenter. Une peinture avec ventre beaucoup plus arrondi devait suivre.
+                            Donc lorsque le petit être voit les seins et veut téter il ne se pose pas la question d'une quelconque intellectualité
+                            de sa mère. Il n'y a aucun machisme dans ma démarche seulement une ode à la beauté d'un corps d'ailleurs vous remarquerez
+                            que le sexe n'est point présent.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 9 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">9</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP9.jpg') }}">
+                        <div class="title">
+                            <h2>Pensées profondes<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Homme perdu dans ses pensées.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 10 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">10</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/portrait/huileP10.jpg') }}">
+                        <div class="title">
+                            <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Mammy et ses petits enfants.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 11 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">11</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT1.jpg') }}">
+                        <div class="title">
+                            <h2>Surréaliste<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Méditation psychanalytique.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 12 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">12</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT2.jpg') }}">
+                        <div class="title">
+                            <h2>Thérapeutique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Un certain jean do.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 13 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">13</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT3.jpg') }}">
+                        <div class="title">
+                            <h2>Thérapeutique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Assèchement de l amour.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 14 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">14</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT4.jpg') }}">
+                        <div class="title">
+                            <h2>Thérapeutique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Absence d'amour maternelle.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 15 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">15</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT5.jpg') }}">
+                        <div class="title">
+                            <h2>Thérapeutique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Transition générationnelle.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 16 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">16</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT6.jpg') }}">
+                        <div class="title">
+                            <h2>Thérapeutique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Tenir pour les revoir.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 17 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">17</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT7.jpg') }}">
+                        <div class="title">
+                            <h2>Thérapeutique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Paranoia sensitive.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 18 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">18</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/therapeutique/huileT8.jpg') }}">
+                        <div class="title">
+                            <h2>Thérapeutique<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Maux de tête.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- end timeline -->
+
+    {% block javascripts %}
+    {% endblock %}
+    <script src="{{ asset('js/responsive_timeline/timeLine.js') }}"></script>
+    <script src="{{ asset('js/responsive_timeline/script.js') }}"></script>
+
+{% endblock %}
