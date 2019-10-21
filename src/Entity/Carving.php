@@ -26,10 +26,11 @@ class Carving
      */
     private $support;
 
+   
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $year;
+    private $img;
 
     public function getId(): ?int
     {
@@ -60,14 +61,14 @@ class Carving
         return $this;
     }
 
-    public function getYear(): ?string
+    public function getImg(): ?string
     {
-        return $this->year;
+        return $this->img;
     }
 
-    public function setYear(string $year): self
+    public function setImg(string $img): self
     {
-        $this->year = $year;
+        $this->img = $img;
 
         return $this;
     }
