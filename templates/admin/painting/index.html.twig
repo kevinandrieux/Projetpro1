@@ -4,22 +4,21 @@
 
 {% block body %}
 
-    <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
+    <div class="container-fluid backgroundBruno">
+        <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
 
-    <div class="jumbotron">
-        <div class="text-center">
-            <h1 class="jumbotronTitle">Peintures index</h1>
-        </div>
+            <div class="text-center">
+                <h1 class="jumbotronTitle titleAdmin">Peintures index</h1>
+            </div>
 
-        <div class="text-left">
-            <h2 class="jumbotronTitle pt-4">Liste de toutes les peintures</h2>
-        </div>
-    </div>
+            <div class="text-left">
+                <h2 class="jumbotronTitle pt-4">Liste de toutes les peintures</h2>
+            </div>
 
-    <a class="float-right btn btn-primary mb-5 mt-5" href="{{ path('painting_new') }}">Ajouter</a>
+        <a class="float-right btn btn-primary mb-5 mt-5" href="{{ path('painting_new') }}">Ajouter</a>
 
-    <table class="table">
-        <thead>
+        <table class="table">
+            <thead class="tableWhite">
             <tr>
                 <th>Id</th>
                 <th>Type</th>
@@ -30,28 +29,29 @@
                 <th>Apperçu</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for painting in paintings %}
-            <tr>
-                <td>{{ painting.id }}</td>
-                <td>{{ painting.type }}</td>
-                <td>{{ painting.title }}</td>
-                <td>{{ painting.description }}</td>
-                <td>{{ painting.img }}</td>
-                <td>{{ painting.category }}</td>
-                <td><img src="{{ asset(painting.img) }}" alt="oeuvre de Mr Turgis" style="width: 10vw"></td>
-                <td>
-                    <a  class="btn btn-primary" href="{{ path('painting_show', {'id': painting.id}) }}">Voir</a>
-                    <a class="btn btn-secondary" href="{{ path('painting_edit', {'id': painting.id}) }}">Editer</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">Aucun résultat</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody class="tableWhite">
+            {% for painting in paintings %}
+                <tr>
+                    <td>{{ painting.id }}</td>
+                    <td>{{ painting.type }}</td>
+                    <td>{{ painting.title }}</td>
+                    <td>{{ painting.description }}</td>
+                    <td>{{ painting.img }}</td>
+                    <td>{{ painting.category }}</td>
+                    <td><img src="{{ asset(painting.img) }}" alt="oeuvre de Mr Turgis" style="width: 10vw"></td>
+                    <td>
+                        <a  class="btn btn-primary" href="{{ path('painting_show', {'id': painting.id}) }}">Voir</a>
+                        <a class="btn btn-secondary" href="{{ path('painting_edit', {'id': painting.id}) }}">Editer</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="7">Aucun résultat</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
 {% endblock %}
