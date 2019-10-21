@@ -1,0 +1,307 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/responsive_timeline/style.css') }}">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+{% endblock %}
+{% block title %}Les peintures à huile de style classique{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotronClassicalOil text-white">
+        <div class="text-center">
+            <h1 class="jumbotronTitle">Les peintures à huile de style classique, au pinceau ou au couteau.</h1>
+        </div>
+
+        <div class="container">
+            <p class="jumbotronTitle explain pt-4">Peinture à huile.</p>
+            <p class="jumbotronTitle explain">
+                Jean de Bruges, peintre Flamand, est le premier qui ait employé l’huile dans la peinture.
+                La peinture à l’huile a plusieurs avantages sur les autres manières de peindre ; l’huile adoucit les couleurs qui y sont
+                détrempées, elles imitent mieux le naturel, et marquent plus fortement les ombres. Les tableaux peints à l’huile peuvent
+                se retoucher, mais très difficilement sans qu’il y paraisse au bout de certain temps, après qu’ils ont été finis et achevés. <br>
+                La peinture à l’huile est très bonne pour les tableaux de moyenne grandeur. On l’emploie cependant dans de grands ouvrages,
+                comme dans des coupoles, des galeries, mais l’humidité en détache des morceaux ce qui n’arrive point à la fresque. Les
+                meilleurs huiles qu’on puisse employer, sont l’huile de lin, l’huile de noix et l’huile d’oliette<br>
+                (Pernety – dictionnaire des arts – 1757).
+            </p>
+        </div><!-- end container -->
+
+    </div><!-- end jumbotron -->
+
+    <h1 style="text-align: center; color: white; margin-top:150px">Du classique, du surréaliste, de l'étrange, du curieux.</h1>
+
+    <div class="timeLine">
+        <div class="row">
+            <div class="lineHeader hidden-sm hidden-xs"></div>
+            <div class="lineFooter hidden-sm hidden-xs"></div>
+
+            <!-- img 1 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item" >
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">1</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC1.jpg') }}">
+                        <div class="title">
+                            <h2>Toile<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Toile pliée taille crayon. Peinture à huile classique au pinceau.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 2 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">2</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC2.jpg') }}">
+                        <div class="title">
+                            <h2>Pigeonnier<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Abbaye de Dommartin, ancien monastère avec pigeonnier près d'Hesdin. Peintura à huile classique au pinceau.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 3 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">3</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC3.jpg') }}">
+                        <div class="title">
+                            <h2>Mont St Michel<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Soirée au Mont Saint Michel. Peinture à huile classique au pinceau.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 4 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">4</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC4.jpg') }}">
+                        <div class="title">
+                            <h2>Paysage<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Baie d'authie. Peinture à huile classique au pinceau.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 5 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">5</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC5.jpg') }}">
+                        <div class="title">
+                            <h2>Recueillement<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Recueillement de pénitents. Peinture à huile classique au pinceau.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 6 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">6</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC6.jpg') }}">
+                        <div class="title">
+                            <h2>Paysage de montagnes<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Montagne enneigees,aucun lieu en particulier, mais plusieurs en un seul. Peinture à huile classique au pinceau.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 7 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">7</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC7.jpg') }}">
+                        <div class="title">
+                            <h2>Palissade<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Palissade violons. Peinture à huile classique au pinceau.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 8 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">8</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC8.jpg') }}">
+                        <div class="title">
+                            <h2>Voilier<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">
+                            Voiliers avant la tempête. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 9 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">9</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC9.jpg') }}">
+                        <div class="title">
+                            <h2>Voiliers<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">
+                            Course de voiliers au couché du soleil. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 10 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">10</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC10.jpg') }}">
+                        <div class="title">
+                            <h2>Vérotières<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Vérotières sur le sable.
+                            Pêcheuse de vers pour la pêche, elles allaient aussi à la pêche à la crevette. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 11 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">11</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC11.jpg') }}">
+                        <div class="title">
+                            <h2>Pêche<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Départ de pêche. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 12 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">12</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC12.jpg') }}">
+                        <div class="title">
+                            <h2>Pêche<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Retour de pêche. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 13 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">13</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC13.jpg') }}">
+                        <div class="title">
+                            <h2>Beffroi<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Moulin et beffroi dans la campagne du nord. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 14 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">14</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC14.jpg') }}">
+                        <div class="title">
+                            <h2>Bateau<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Bateau à l'ancrage dans l'estuaire de l'Authie. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 15 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">15</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/huile/classique/huileC15.jpg') }}">
+                        <div class="title">
+                            <h2>Nature morte<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Nature morte au pantin. Peinture dit "au couteau".</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- end timeline -->
+
+    {% block javascripts %}
+    {% endblock %}
+    <script src="{{ asset('js/responsive_timeline/timeLine.js') }}"></script>
+    <script src="{{ asset('js/responsive_timeline/script.js') }}"></script>
+
+
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/responsive_timeline/style.css') }}">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+{% endblock %}
+{% block title %}Les peintures laquées.{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotronLaqueredPainting text-white">
+        <div class="text-center">
+            <h1 class="jumbotronTitle">Les peintures laquées.</h1>
+        </div>
+
+        <div class="container">
+            <p class="jumbotronTitle explain pt-4 text-center">Dans le terme générique de laque je regroupe les peintures bâtiments bricolage, extérieur/intérieur mais non à l'eau.
+            </p>
+        </div><!-- end container -->
+
+    </div><!-- end jumbotron -->
+
+    <h1 style="text-align: center; color: white; margin-top:150px">Du classique, du surréaliste, de l'étrange, du curieux.</h1>
+
+    <div class="timeLine">
+        <div class="row">
+            <div class="lineHeader hidden-sm hidden-xs"></div>
+            <div class="lineFooter hidden-sm hidden-xs"></div>
+
+            <!-- img 1 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item" >
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">1</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/laque/laque1.jpg') }}">
+                        <div class="title">
+                            <h2>Fresque militaire<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Fresques réalisées pour la gendarmerie. : interactions des services de recherches
+                            judiciaires et d'exploitation avec les laboratoires de criminologie et d'expertises.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 2 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">2</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/laque/laque2.jpg') }}">
+                        <div class="title">
+                            <h2>Fresque militaire<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">"Fresque" de 6 mètres représentant les forces de la gendarmerie, laboratoires, brigades,
+                            recherches, mobiles, garde républicaine.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 3 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">3</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/laque/laque3.jpg') }}">
+                        <div class="title">
+                            <h2>Oeufs<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Essai de mélanges et de facilité d'emploi de la  laque sur contreplaqué.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 4 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">4</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/laque/laque4.jpg') }}">
+                        <div class="title">
+                            <h2>Tâches<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Tâches.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 5 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">5</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/vitrail/vitrail1.jpg') }}">
+                        <div class="title">
+                            <h2>Vitrail<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Armoiries famille des vitraux.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 6 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">6</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/vitrail/vitrail2.jpg') }}">
+                        <div class="title">
+                            <h2>Vitrail<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Armoiries famille des vitraux.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- img 7 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+                <div class="caption">
+                    <div class="star center-block">
+                        <span class="h3">7</span>
+                    </div>
+                    <div class="image">
+                        <img class="realImage" src="{{ asset('img/peintures/vitrail/vitrail3.jpg') }}">
+                        <div class="title">
+                            <h2>Vitrail<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <p class="lead">Armoiries famille des vitraux.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- end timeline -->
+
+    {% block javascripts %}
+    {% endblock %}
+    <script src="{{ asset('js/responsive_timeline/timeLine.js') }}"></script>
+    <script src="{{ asset('js/responsive_timeline/script.js') }}"></script>
+
+{% endblock %}

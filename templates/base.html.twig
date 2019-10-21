@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse justify-content-center " id="navbarNavDropdown">
                 <ul class="navbar-nav">
                  <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Accueil</a>
+                        <a class="nav-link text-white" href="{{ path('home') }}">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,17 +61,18 @@
                         Peintures
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Aquarelle</a>
-                        <a class="dropdown-item" href="#">Huile</a>
-                        <a class="dropdown-item" href="#">Gouache</a>
-                        <a class="dropdown-item" href="#">Laque</a>
+                        <a class="dropdown-item" href="{{ path('watercolors_show') }}">Aquarelles&Gouache</a>
+                        <a class="dropdown-item" href="{{ path('classicalOil_show') }}">&Agrave; huile, style classique</a>
+                        <a class="dropdown-item" href="{{ path('fantasticalOil_show') }}">&Agrave; huile, style fantastique</a>
+                        <a class="dropdown-item" href="{{ path('surrealistOil_show') }}">&Agrave; huile, style surréaliste, thérapeutique & portrait</a>
+                        <a class="dropdown-item" href="{{ path('laqueredOil_swhow') }}">Peintures laquées et vitraux</a>
                         </div>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link text-white" href="#">Oeuvre numérique</a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Oeufs décoratifs</a>
+                        <a class="nav-link text-white" href="{{ path('eggs_page') }}">Oeufs décoratifs</a>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link text-white" href="#">Contact</a>

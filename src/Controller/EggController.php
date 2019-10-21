@@ -9,10 +9,10 @@ class EggController extends AbstractController{
 
     /**
      * @return Response
-     * @Route("aquarelles", name="watercolors_show")
+     * @Route("oeufs", name="eggs_page")
      */
-    public function aquarelle():Response
+    public function eggsPage():Response
     {
-        return $this->render('painting/aquarelles.html.twig');
+        return $this->render('eggs/eggs.html.twig');
     }
 }
