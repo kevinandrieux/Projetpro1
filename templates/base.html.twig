@@ -14,13 +14,16 @@
         <!-- Place your kit's code here -->
         <script src="https://kit.fontawesome.com/4439fb06db.js" crossorigin="anonymous"></script>
         <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+       
+        </script>
 
         <!-- Popper JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+       
 
         {% block stylesheets %}{% endblock %}
 
@@ -58,7 +61,7 @@
                         Peintures
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ path('watercolors_show') }}">Aquarelles</a>
+                        <a class="dropdown-item" href="#">Aquarelle</a>
                         <a class="dropdown-item" href="#">Huile</a>
                         <a class="dropdown-item" href="#">Gouache</a>
                         <a class="dropdown-item" href="#">Laque</a>
@@ -79,5 +82,18 @@
         </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+            $(document).on('contextmenu', 'body', function(e) {
+                // code
+                e.preventDefault();
+                return false;
+        });
+        </script>
+          <script type="text/javascript">
+    //<!--
+        document.oncontextmenu = new Function("return false");
+    //-->
+    </script>
     </body>
+
 </html>
