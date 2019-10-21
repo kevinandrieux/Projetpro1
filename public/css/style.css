@@ -78,7 +78,12 @@
 ************************/
 
 /* section choice */
-
+.jumbotronAdmin{
+    margin: 16vh 0 13vh 0;
+    opacity: 0.9;
+    background-color: #444444;
+    padding: 8vh 2vw 8vh 2vw;
+}
 /* Float four columns side by side */
 .counter-column {
     float: left;
