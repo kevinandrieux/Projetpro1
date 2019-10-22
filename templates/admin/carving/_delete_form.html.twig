@@ -1,0 +1,6 @@
+<form method="post" action="{{ path('carving_delete', {'id': carving.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ carving.id) }}">
+    <button class="btn btn-danger">Supprimer</button>
+    <a href="{{ path('carving_index') }}">Annuler</a>
+</form>
