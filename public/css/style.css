@@ -7,7 +7,7 @@
     background-size: 65%;
     background-position-x: center;
     background-attachment: fixed;
-
+    padding-top: 8vh;
 
 }
 
@@ -64,11 +64,17 @@
     color: #FFFFFF;
 }
 .backgroundBruno{
-    padding: 15vh 0 15vh 0;
+    padding: 15vh 0 5vh 0;
     background-color: #444444;
     margin-top: -15vh;
     opacity: 0.9;
     color: #FFFFFF;
+    height: 100%;
+}
+.backgroundB{
+    background-color: #444444;
+    padding: 5vh 9vw 5vh 9vw!important;
+    opacity: 0.9;
 }
 .tableWhite{
     color: #FFFFFF;
