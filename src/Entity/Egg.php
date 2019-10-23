@@ -21,7 +21,7 @@ class Egg
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\NotBlank(message="Ce champ est obligatoire")
      * @Assert\Choice({"oeuf"},
-     *     message="Ce champs ne peut contenir que '{{ value }}' ")
+     *     message="Ce champs ne peut contenir que 'oeuf' ")
      */
     private $type;
 

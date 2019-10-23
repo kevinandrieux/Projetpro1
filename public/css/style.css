@@ -105,6 +105,11 @@
     display: table;
     clear: both;
 }
+/* FORM */
+.form-error-message{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
 /* Annimation */
 .effect-chico{
