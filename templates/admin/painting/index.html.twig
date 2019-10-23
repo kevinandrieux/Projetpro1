@@ -7,15 +7,19 @@
     <div class="container-fluid backgroundBruno">
         <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
 
-            <div class="text-center">
-                <h1 class="jumbotronTitle titleAdmin">Peintures index</h1>
-            </div>
+        <div class="text-center">
+            <h1 class="jumbotronTitle titleAdmin">Peintures index</h1>
+        </div>
 
-            <div class="text-left">
-                <h2 class="jumbotronTitle pt-4">Liste de toutes les peintures</h2>
-            </div>
+        <div class="text-left">
+            <h2 class="jumbotronTitle pt-4">Liste de toutes les peintures</h2>
+        </div>
 
         <a class="float-right btn btn-primary mb-5 mt-5" href="{{ path('painting_new') }}">Ajouter</a>
+
+        <div class="pagination mt-5">
+            {{ knp_pagination_render(paintings) }}
+        </div>
 
         <table class="table">
             <thead class="tableWhite">
@@ -52,6 +56,7 @@
             {% endfor %}
             </tbody>
         </table>
+
         <div class="pagination">
             {{ knp_pagination_render(paintings) }}
         </div>

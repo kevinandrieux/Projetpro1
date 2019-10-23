@@ -7,15 +7,19 @@
     <div class="container-fluid backgroundBruno">
         <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
 
-            <div class="text-center">
-                <h1 class="jumbotronTitle titleAdmin">Oeufs index</h1>
-            </div>
+        <div class="text-center">
+            <h1 class="jumbotronTitle titleAdmin">Oeufs index</h1>
+        </div>
 
-            <div class="text-left">
-                <h2 class="jumbotronTitle pt-4">Liste de tous les oeufs</h2>
-            </div>
+        <div class="text-left">
+            <h2 class="jumbotronTitle pt-4">Liste de tous les oeufs</h2>
+        </div>
 
         <a class="btn btn-secondary float-right mb-5 mt-5" href="{{ path('egg_new') }}">Ajouter</a>
+
+        <div class="pagination mt-5">
+            {{ knp_pagination_render(eggs) }}
+        </div>
 
         <table class="table">
             <thead class="tableWhite">

@@ -2,14 +2,14 @@
 
 namespace App\Form;
 
-use App\Entity\Painting;
+use App\Entity\Search;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PaintingType extends AbstractType
+class SearchType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -24,12 +24,6 @@ class PaintingType extends AbstractType
                 ]
             ])
             ->add('title', TextType::class,[
-                'required' =>false,
-            ])
-            ->add('description', TextType::class,[
-                'required' =>false,
-            ])
-            ->add('img', TextType::class,[
                 'required' =>false,
             ])
             ->add('category', ChoiceType::class, [
@@ -49,7 +43,7 @@ class PaintingType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Painting::class,
+            'data_class' => Search::class,
         ]);
     }
 }
