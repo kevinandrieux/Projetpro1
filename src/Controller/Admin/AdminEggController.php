@@ -3,7 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Egg;
+use App\Entity\Search;
 use App\Form\EggType;
+use App\Form\SearchType;
 use App\Repository\EggRepository;
 use App\Repository\PaintingRepository;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -35,21 +37,26 @@ class AdminEggController extends AbstractController
     }
 
     /**
-     * @Route("/", name="egg_index", methods={"GET"})
+     * @Route("/", name="egg_index")
      * @param PaginatorInterface $paginator
      * @param Request $request
      * @return Response
      */
     public function index(PaginatorInterface $paginator, Request $request): Response
     {
+        $searchEggs = new Search();
+        $form = $this->createForm(SearchType::class, $searchEggs);
+        $form->handleRequest($request);
+
         $egg = $paginator->paginate(
-            $this->eggRepository->findAll(),
+            $this->eggRepository->findAllEggQuery($searchEggs),
             $request->query->getInt('page', 1), /*page number*/
             20 /*limit per page*/
         );
 
         return $this->render('admin/egg/index.html.twig', [
             'eggs' => $egg,
+            'form' => $form->createView(),
         ]);
     }
 

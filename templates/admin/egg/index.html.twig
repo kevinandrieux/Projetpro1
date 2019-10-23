@@ -11,6 +11,32 @@
             <h1 class="jumbotronTitle titleAdmin">Oeufs index</h1>
         </div>
 
+        <div class="filter my-4">
+            <h3>Option de filtrage</h3>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col col-md-4">
+                    {{ form_label(form.type, 'Type') }}
+                    {{ form_widget(form.type, {"attr": {
+                        "placeholder" : "Type","value" : "oeuf"}}) }}
+                </div>
+                <div class="col col-md-4">
+                    {{ form_label(form.title, 'Titre') }}
+                    {{ form_widget(form.title, {"attr": {
+                        "placeholder" : "Titre"}}) }}
+                </div>
+                <div class="col col-md-4">
+                    {{ form_label(form.category, 'Categorie ou style') }}
+                    {{ form_widget(form.category, {"attr": {
+                        "placeholder" : "Choisissez dans la liste"}}) }}
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary col-4 ml-3 my-3">{{ button|default('Rechercher') }}</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
         <div class="text-left">
             <h2 class="jumbotronTitle pt-4">Liste de tous les oeufs</h2>
         </div>

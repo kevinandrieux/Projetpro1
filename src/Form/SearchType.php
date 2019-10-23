@@ -17,6 +17,7 @@ class SearchType extends AbstractType
             ->add('type', ChoiceType::class, [
                 'required' => false,
                 'choices' => [
+                    'oeuf' => 'oeuf',
                     'aquarelle' => 'aquarelle',
                     'huile' => 'huile',
                     'laque' => 'laque',
@@ -45,5 +46,10 @@ class SearchType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Search::class,
         ]);
+    }
+
+    public function getBlockPrefix()
+    {
+        return '';
     }
 }
