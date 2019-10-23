@@ -5,6 +5,8 @@ namespace App\Controller\Admin;
 use App\Entity\Painting;
 use App\Form\PaintingType;
 use App\Repository\PaintingRepository;
+use Doctrine\Common\Persistence\ObjectManager;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,14 +18,35 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminPaintingController extends AbstractController
 {
     /**
+     * @var PaintingRepository
+     */
+    private $paintingRepository;
+    /**
+     * @var ObjectManager
+     */
+    private $objectManager;
+
+    public function __construct(PaintingRepository $paintingRepository, ObjectManager $objectManager)
+    {
+        $this->paintingRepository = $paintingRepository;
+        $this->objectManager = $objectManager;
+    }
+
+    /**
      * @Route("/", name="painting_index", methods={"GET"})
-     * @param PaintingRepository $paintingRepository
+     * @param PaginatorInterface $paginator
+     * @param Request $request
      * @return Response
      */
-    public function index(PaintingRepository $paintingRepository): Response
+    public function index(PaginatorInterface $paginator, Request $request): Response
     {
+        $painting = $paginator->paginate(
+            $this->paintingRepository->findAll(),
+            $request->query->getInt('page', 1), /*page number*/
+            20 /*limit per page*/
+        );
         return $this->render('admin/painting/index.html.twig', [
-            'paintings' => $paintingRepository->findAll(),
+            'paintings' => $painting,
         ]);
     }
 
