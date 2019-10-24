@@ -7,6 +7,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
 
+
 class AppDidrikFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
@@ -30,6 +31,7 @@ class AppDidrikFixtures extends Fixture
             $drawings[] = $drawing;
         }
 
+        
         //      ADD  APOCALYPSE   //
         $drawings = [];
         for ($APO = 1; $APO <= 12; $APO++) {
