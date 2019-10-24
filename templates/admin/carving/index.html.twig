@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste de Sculptures{% endblock %}
+
+{% block body %}
+ <div class="container-fluid backgroundBruno">
+        <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
+        <div class="text-center">
+                <h1 class="jumbotronTitle titleAdmin">Sculptures index</h1>
+        </div>
+         <div class="text-left">
+                <h2 class="jumbotronTitle pt-4">Liste de tous les Sculptures</h2>
+        </div>
+<a class='btn btn-secondary float-right mb-5 mt-5' href="{{ path('carving_new') }}">Ajout d'une nouvelle sculpture</a>
+    <table class="table">
+        <thead class="tableWhite">
+            <tr>
+                
+                <th>Title</th>
+                <th>Support</th>
+                <th>chemin de l'image</th>
+                <th>Img</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody class='tableWhite'>
+        {% for carving in carvings %}
+            <tr>
+                
+                <td>{{ carving.title }}</td>
+                <td>{{ carving.support }}</td>
+                <td>{{ carving.img }}</td>
+                <td><img src="{{asset(carving.img) }}" alt="oeuvre de Mr Turgis" style="width: 10vw"></td>
+                <td>
+                    <a class='btn btn-primary' href="{{ path('carving_edit', {'id': carving.id}) }}">Modifier</a>
+                    <a class='btn btn-danger' href="{{ path('carving_show', {'id': carving.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">Aucun Resultad</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

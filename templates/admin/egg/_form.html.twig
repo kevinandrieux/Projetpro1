@@ -1,4 +1,35 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+
+<div class="row">
+
+    <div class="col col-12 col-md-6 my-3">
+        {{ form_label(form.type, 'Type') }}
+        {{ form_widget(form.type, {"attr": {
+            "placeholder" : "Type","value" : "oeuf"}}) }}
+    </div>
+    <div class="col col-12 col-md-6 my-3">
+        {{ form_label(form.title, 'Titre') }}
+        {{ form_widget(form.title, {"attr": {
+            "placeholder" : "Titre"}}) }}
+    </div>
+    <div class="col col-12 col-md-6 my-3">
+        {{ form_label(form.img, 'Chemin de l\'image') }}
+        {{ form_widget(form.img, {"attr": {
+            "placeholder" : "Emplacement de l'image"}}) }}
+    </div>
+    <div class="col col-12 col-md-6 my-3">
+        {{ form_label(form.category, 'Categorie ou style') }}
+        {{ form_widget(form.category, {"attr": {
+            "placeholder" : "Ce champ n'est pas obligatoire"}}) }}
+    </div>
+    <div class="col col-12 my-3">
+        {{ form_label(form.description, 'Description') }}
+        {{ form_widget(form.description, {"attr": {
+            "placeholder" : "Ecrire ici, ce champ est optionnel."}}) }}
+    </div>
+
+</div>
+
+    <button class="btn btn-primary my-3">{{ button_label|default('Enregistrer') }}</button>
+
 {{ form_end(form) }}

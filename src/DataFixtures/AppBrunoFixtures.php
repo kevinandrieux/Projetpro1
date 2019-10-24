@@ -21,7 +21,7 @@ class AppBrunoFixtures extends Fixture
 
         //                 ADD Watercolor (aquarelle)         //
         $watercolors = [];
-        for ($w = 1; $w <= 32; $w++){
+        for ($w = 1; $w <= 37; $w++){
             $watercolor = new Painting();
             $watercolor->setType('aquarelle')
                 ->setTitle('Peinture aquarelle '.$w)
@@ -46,7 +46,7 @@ class AppBrunoFixtures extends Fixture
             $oils[] = $classic;
         }
         // fantastic oil
-        for ($f = 1; $f <= 35; $f++){
+        for ($f = 1; $f <= 38; $f++){
             $fantastic = new Painting();
             $fantastic->setType('huile')
                 ->setTitle('Peinture fantastique '.$f)
