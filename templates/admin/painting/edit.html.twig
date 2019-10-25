@@ -6,12 +6,13 @@
 
     <div class="container-fluid backgroundBruno">
 
+        <a class="btn btn-secondary float-right my-3" href="{{ path('painting_index') }}">Retour à la liste</a>
+
         <h1 class="titleAdmin">Edition</h1>
 
         {{ include('admin/painting/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-        <a class="btn btn-secondary" href="{{ path('painting_index') }}">Retour à la liste</a>
-
         {{ include('admin/painting/_delete_form.html.twig') }}
+
     </div>
 {% endblock %}

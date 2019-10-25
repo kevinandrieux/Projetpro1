@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PaintingRepository")
@@ -18,11 +19,18 @@ class Painting
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="Ce champ est obligatoire")
      */
     private $type;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="Ce champ est obligatoire")
+     * @Assert\Length(
+     *     min=3,
+     *     max=255,
+     *     minMessage="Ce champ doit contenir au moins 3 caractères. / Min 3 characters.",
+     *     maxMessage="Ce champ ne peut dépasser 255 caractères. / Max 255 characters.")
      */
     private $title;
 

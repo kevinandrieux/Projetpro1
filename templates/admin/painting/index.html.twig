@@ -7,51 +7,90 @@
     <div class="container-fluid backgroundBruno">
         <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
 
-            <div class="text-center">
-                <h1 class="jumbotronTitle titleAdmin">Peintures index</h1>
-            </div>
+        <div class="text-center">
+            <h1 class="jumbotronTitle titleAdmin">Peintures index</h1>
+        </div>
 
-            <div class="text-left">
-                <h2 class="jumbotronTitle pt-4">Liste de toutes les peintures</h2>
+        <div class="filter my-4">
+            <h3>Option de filtrage</h3>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col col-md-4">
+                    {{ form_label(form.type, 'Type') }}
+                    {{ form_widget(form.type, {"attr": {
+                        "placeholder" : "Type"}}) }}
+                </div>
+                <div class="col col-md-4">
+                    {{ form_label(form.title, 'Titre') }}
+                    {{ form_widget(form.title, {"attr": {
+                        "placeholder" : "Titre"}}) }}
+                </div>
+                <div class="col col-md-4">
+                    {{ form_label(form.category, 'Categorie ou style') }}
+                    {{ form_widget(form.category, {"attr": {
+                        "placeholder" : "Choisissez dans la liste"}}) }}
+                </div>
             </div>
+            <div class="row">
+                <button class="btn btn-secondary col-4 ml-3 my-3">{{ button|default('Rechercher') }}</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
+        <div class="text-left">
+            <h2 class="jumbotronTitle pt-4">Liste de toutes les peintures</h2>
+        </div>
 
         <a class="float-right btn btn-primary mb-5 mt-5" href="{{ path('painting_new') }}">Ajouter</a>
 
-        <table class="table">
-            <thead class="tableWhite">
-            <tr>
-                <th>Id</th>
-                <th>Type</th>
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Chemin source</th>
-                <th>Categorie</th>
-                <th>Apperçu</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody class="tableWhite">
+        <div class="pagination mt-5">
+            {{ knp_pagination_render(paintings) }}
+        </div>
+
+        <div class="row mt-5">
             {% for painting in paintings %}
-                <tr>
-                    <td>{{ painting.id }}</td>
-                    <td>{{ painting.type }}</td>
-                    <td>{{ painting.title }}</td>
-                    <td>{{ painting.description }}</td>
-                    <td>{{ painting.img }}</td>
-                    <td>{{ painting.category }}</td>
-                    <td><img src="{{ asset(painting.img) }}" alt="oeuvre de Mr Turgis" style="width: 10vw"></td>
-                    <td>
-                        <a  class="btn btn-primary" href="{{ path('painting_show', {'id': painting.id}) }}">Voir</a>
-                        <a class="btn btn-secondary" href="{{ path('painting_edit', {'id': painting.id}) }}">Editer</a>
-                    </td>
-                </tr>
+            <div class="row borderY_white">
+                <div class="col-4 col-md-3">
+                    <h6>Type</h6>
+                    {{ painting.type }}
+                </div>
+                <div class="col-4 col-md-3">
+                    <h6>Titre</h6>
+                    {{ painting.title }}
+                </div>
+                <div class="col-4 col-md-6">
+                    <h6>Description</h6>
+                    {{ painting.description }}
+                </div>
+                <div class="col-4 col-md-3">
+                    <h6>Chemin source</h6>
+                    {{ painting.img }}
+                </div>
+                <div class="col-4 col-md-3">
+                    <h6>Catégorie</h6>
+                    {{ painting.category }}
+                </div>
+                <div class="col-4 col-md-3">
+                    <h6>Action</h6>
+                    <a class="btn btn-primary" href="{{ path('painting_show', {'id': painting.id}) }}">Voir</a>
+                    <a class="btn btn-secondary" href="{{ path('painting_edit', {'id': painting.id}) }}">&Eacute;diter</a>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h6>Apperçu</h6>
+                    <img src="{{ asset(painting.img) }}" alt="oeuvre de Mr Turgis">
+                </div>
+            </div>
             {% else %}
-                <tr>
-                    <td colspan="7">Aucun résultat</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+        </div>
+
+        <tr>
+            <td colspan="7">Aucun résultat</td>
+        </tr>
+        {% endfor %}
+
+        <div class="pagination">
+            {{ knp_pagination_render(paintings) }}
+        </div>
     </div>
 
 {% endblock %}

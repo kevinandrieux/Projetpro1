@@ -3,8 +3,11 @@
 namespace App\Repository;
 
 use App\Entity\Painting;
+use App\Entity\Search;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\ORM\Query;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * @method Painting|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,9 +17,46 @@ use Doctrine\Common\Persistence\ManagerRegistry;
  */
 class PaintingRepository extends ServiceEntityRepository
 {
+    /**
+     * PaintingRepository constructor.
+     * @param ManagerRegistry $registry
+     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Painting::class);
+    }
+
+
+    public function findAllPaintingQuery(Search $search): Query
+    {
+        $query = $this->findAllQuery();
+
+        if ($search->getType()) {
+            $query = $query
+                ->andWhere('painting.type = :type')
+                ->setParameter('type', $search->getType());
+        }
+
+        if ($search->getTitle()) {
+            $query = $query
+                ->andWhere('painting.title = :title')
+                ->setParameter('title', $search->getTitle());
+        }
+
+        if ($search->getCategory()) {
+            $query = $query
+                ->andWhere('painting.category = :category')
+                ->setParameter('category', $search->getCategory());
+        }
+
+        return $query->getQuery();
+    }
+
+
+    private function findAllQuery(): QueryBuilder
+    {
+        return $this->createQueryBuilder('painting')
+            ->orderBy('painting.id', 'ASC');
     }
 
     // /**
