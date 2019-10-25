@@ -2,9 +2,12 @@
 
 {% block title %}Modifier sculpture{% endblock %}
 
-{% block body %}
-    <h1>Modifiers sculpture</h1>
+{% block body %}  
+    <div class="container-fluid backgroundBruno">
 
-    {{ include('carving/_form.html.twig', {'button_label': 'Update'}) }}
+        <h1 class="titleAdmin">Modifiers sculpture</h1>
+
+    {{ include('Admin/carving/_form.html.twig', {'button_label': 'Modifier'}) }}
+    </div>
     
 {% endblock %}
