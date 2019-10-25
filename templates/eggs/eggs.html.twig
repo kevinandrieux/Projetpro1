@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Oeufs{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/3d_slider/style.css') }}">
+{% endblock %}
 
 {% block body %}
 
@@ -10,48 +13,274 @@
             <h1 class="jumbotronTitle titleAdmin">Oeufs</h1>
         </div>
 
-        <div class="container" style="padding-top: 150px; height: 850px">
+        <div class="container-fluid backgroundB" style="padding-top: 150px">
 
-            <div class="row">
+            <p>
+                Je me suis amusée à peindre les œufs lors de divers séjours à l'hôpital, cela ne prenait pas de place et
+                je n'avais pas besoin de beaucoup de matériel, ce fut Erik qui me proposa l'idée car je n'avais pas la
+                tête dirons nous à écrire.
+            </p>
+            <p>
+                Certains sont plus travaillés que d'autres ce qui est évident puisqu'au fur et à mesure j'ai acquis un peu
+                plus de dextérité.Pour certains J'ai eu des modèles et notamment l'aide de Gershom qui m'a envoyé des
+                ouvrages pour les expressions et styles BD des personnages car je n'y connaissais rien. Je dois avouer
+                toutefois que dans la série des monuments certains sont de Erik  qui les a peint lorsqu'il  venait me
+                voir; il s'agit du Mt St Michel, de Chenonceau, Tahaj Mahal, Venise, Manhattan,Statues de la  liberté,
+                de l'ile de Pâques, Aztèques, et du mont Rushmore.
+            </p>
 
-                <div class="col col-md-6">
-                    <p>
-                        Je me suis amusée à peindre les œufs lors de divers séjours à l'hôpital, cela ne prenait pas de place et
-                        je n'avais pas besoin de beaucoup de matériel, ce fut Erik qui me proposa l'idée car je n'avais pas la
-                        tête dirons nous à écrire.
-                    </p>
-                    <p>
-                        Certains sont plus travaillés que d'autres ce qui est évident puisqu'au fur et à mesure j'ai acquis un peu
-                        plus de dextérité.Pour certains J'ai eu des modèles et notamment l'aide de Gershom qui m'a envoyé des
-                        ouvrages pour les expressions et styles BD des personnages car je n'y connaissais rien. Je dois avouer
-                        toutefois que dans la série des monuments certains sont de Erik  qui les a peint lorsqu'il  venait me
-                        voir; il s'agit du Mt St Michel, de Chenonceau, Tahaj Mahal, Venise, Manhattan,Statues de la  liberté,
-                        de l'ile de Pâques, Aztèques, et du mont Rushmore.
-                    </p>
+            <div class="carousel"><!-- carousel 1 -->
+                <div id="showcase" class="noselect">
+                    {% for o in 1..20 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                    {% endfor %}
                 </div>
-
-                <div class="carousel-3d carousel-3d-vertical col col-md-6">
-                    <div class="carousel-3d-inner">
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(48).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(49).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(50).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(51).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(52).jpg" alt="Slide"></div>
-                        <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(53).jpg" alt="Slide"></div>
-                    </div>
-                    <div class="carousel-3d-controls">
-                        <a class="prev-btn waves-effect waves-light text-light"><i class="fas fa-chevron-left"></i></a>
-                        <a class="next-btn waves-effect waves-light text-light"><i class="fas fa-chevron-right"></i></a>
-                    </div>
-                </div><!-- end carousel -->
-
-            </div><!-- end row -->
+                <div id="nav" class="noselect">
+                    <button class="left">
+                        ←
+                    </button>
+                    <button class="right">
+                        →
+                    </button>
+                </div>
+            </div><!-- end carousel -->
 
         </div><!-- end container -->
 
     </div><!-- end container-fluid -->
 
+        <div class="container-fluid backgroundB">
+
+            <div class="carousel"><!-- carousel 2 -->
+                <div id="showcase" class="noselect">
+                    {% for o in 21..40 %}
+                        <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                    {% endfor %}
+                </div>
+                <div id="nav" class="noselect">
+                    <button class="left">
+                        ←
+                    </button>
+                    <button class="right">
+                        →
+                    </button>
+                </div>
+            </div><!-- end carousel -->
+
+        </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 3 -->
+            <div id="showcase" class="noselect">
+                {% for o in 41..60 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 4 -->
+            <div id="showcase" class="noselect">
+                {% for o in 61..80 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 5 -->
+            <div id="showcase" class="noselect">
+                {% for o in 81..100 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 6 -->
+            <div id="showcase" class="noselect">
+                {% for o in 101..120 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 7 -->
+            <div id="showcase" class="noselect">
+                {% for o in 121..140 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 8 -->
+            <div id="showcase" class="noselect">
+                {% for o in 141..160 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 9 -->
+            <div id="showcase" class="noselect">
+                {% for o in 161..180 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+    <div class="container-fluid backgroundB">
+
+        <div class="carousel"><!-- carousel 10 -->
+            <div id="showcase" class="noselect">
+                {% for o in 181..205 %}
+                    <img class="cloud9-item" src="img/oeufs/oeuf{{ o }}.jpg" alt="Oeuf numéro{{ o }}">
+                {% endfor %}
+            </div>
+            <div id="nav" class="noselect">
+                <button class="left">
+                    ←
+                </button>
+                <button class="right">
+                    →
+                </button>
+            </div>
+        </div><!-- end carousel -->
+
+    </div><!-- end container-fluid -->
+
+
+    <script src="{{ asset('js/3d_slider/jquery.reflection.js') }}"></script>
+    <script src="{{ asset('js/3d_slider/jquery.cloud9carousel.js') }}"></script>
+    <script src="{{ asset('js/3d_slider/script.js') }}"></script>
+    <script>
+        $(function() {
+            var showcase = $("#showcase, #showcase2"), title = 'Sculpture en bois'
+            showcase.Cloud9Carousel( {
+                yOrigin: 42,
+                yRadius: 48,
+                mirror: {
+                    gap: 12,
+                    height: 0.2
+                },
+                buttonLeft: $("#nav > .left"),
+                buttonRight: $("#nav > .right"),
+                autoPlay: 1,
+                bringToFront: true,
+                onRendered: rendered,
+                onLoaded: function() {
+                    showcase.css( 'visibility', 'visible' )
+                    showcase.css( 'display', 'none' )
+                    showcase.fadeIn( 1500 )
+                }
+            } )
+            function rendered( carousel ) {
+                title.text( carousel.nearestItem().element.alt )
+                // Fade in based on proximity of the item
+                var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+                title.css('opacity', 0.5 + (0.5 * c))
+            }
+            //
+            // Simulate physical button click effect
+            //
+            $('#nav > button').click( function( e ) {
+                var b = $(e.target).addClass( 'down' )
+                setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+            } )
+            $(document).keydown( function( e ) {
+                //
+                // More codes: http://www.javascripter.net/faq/keycodes.htm
+                //
+                switch( e.keyCode ) {
+                    /* left arrow */
+                    case 37:
+                        $('#nav > .left').click()
+                        break
+                    /* right arrow */
+                    case 39:
+                        $('#nav > .right').click()
+                }
+            } )
+        })
+    </script>
 {% endblock %}
