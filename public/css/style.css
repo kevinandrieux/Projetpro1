@@ -191,10 +191,30 @@
 /******************************
 *  Admin Painting & Egg Index *
  *****************************/
+.borderY_white{
+    width: 100%;
+    border-top-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-style: solid;
+    border-bottom-color: #FFFFFF;
+    padding: 1vh 1vw 1vh 1vw;
+}
+.borderY_white div h6{
+    margin-top: 1vh;
+}
+.borderY_white div img{
+    width: 10vw;
+}
+@media (max-width: 769px) {
+    .borderY_white div img{
+        width: 20vw;
+    }
+}
  .filter {
     height: 30vh;
     width: 80vw;
     margin: auto;
+     padding: 1vh 2vw 0 2vw;
     background: #16235e;
     background: -moz-linear-gradient(top, #444444 0%, #000000 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444444), color-stop(100%,#000000)); /* Chrome, Safari4+ */

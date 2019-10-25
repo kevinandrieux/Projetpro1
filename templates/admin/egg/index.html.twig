@@ -26,7 +26,7 @@
                         "placeholder" : "Titre"}}) }}
                 </div>
                 <div class="col col-md-4">
-                    {{ form_label(form.category, 'Categorie ou style') }}
+                    {{ form_label(form.category, 'Categorie') }}
                     {{ form_widget(form.category, {"attr": {
                         "placeholder" : "Choisissez dans la liste"}}) }}
                 </div>
@@ -47,41 +47,47 @@
             {{ knp_pagination_render(eggs) }}
         </div>
 
-        <table class="table">
-            <thead class="tableWhite">
-            <tr>
-                <th>Id</th>
-                <th>Type</th>
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Chemin source</th>
-                <th>Categorie</th>
-                <th>Apperçu</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody class="tableWhite">
+        <div class="row mt-5">
             {% for egg in eggs %}
-                <tr>
-                    <td>{{ egg.id }}</td>
-                    <td>{{ egg.type }}</td>
-                    <td>{{ egg.title }}</td>
-                    <td>{{ egg.description }}</td>
-                    <td>{{ egg.img }}</td>
-                    <td>{{ egg.category }}</td>
-                    <td><img src="{{ asset(egg.img) }}" alt="oeuvre de Mr Turgis" style="width: 10vw"></td>
-                    <td>
-                        <a class="btn btn-primary" href="{{ path('egg_show', {'id': egg.id}) }}">Voir</a>
-                        <a class="btn btn-secondary" href="{{ path('egg_edit', {'id': egg.id}) }}">Editer</a>
-                    </td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="7">Aucun résultat</td>
-                </tr>
+                    <div class="row borderY_white">
+                        <div class="col-4 col-md-3">
+                            <h6>Type</h6>
+                            {{ egg.type }}
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <h6>Titre</h6>
+                            {{ egg.title }}
+                        </div>
+                        <div class="col-4 col-md-6">
+                            <h6>Description</h6>
+                            {{ egg.description }}
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <h6>Chemin source</h6>
+                            {{ egg.img }}
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <h6>Catégorie</h6>
+                            {{ egg.category }}
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <h6>Action</h6>
+                            <a class="btn btn-primary" href="{{ path('egg_show', {'id': egg.id}) }}">Voir</a>
+                            <a class="btn btn-secondary" href="{{ path('egg_edit', {'id': egg.id}) }}">&Eacute;diter</a>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <h6>Apperçu</h6>
+                            <img src="{{ asset(egg.img) }}" alt="oeuvre de Mr Turgis">
+                        </div>
+                    </div>
+                {% else %}
+            </div>
+
+            <tr>
+                <td colspan="7">Aucun résultat</td>
+            </tr>
             {% endfor %}
-            </tbody>
-        </table>
+
         <div class="pagination">
             {{ knp_pagination_render(eggs) }}
         </div>
