@@ -52,8 +52,8 @@
                         Sculptures
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Bois</a>
-                        <a class="dropdown-item" href="#">Pierre</a>
+                        <a class="dropdown-item" href="{{ path('carvingwoods')}}">Bois</a>
+                        <a class="dropdown-item" href="{{ path('carvingstone')}}">Pierre</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -82,11 +82,7 @@
             </nav>
         </header>
 
-        <div class="wrap">
-            <div class="search">
-                <input type="text" name="recherche" id="recherche">
-            </div>
-        </div>
+
 
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}

@@ -1,67 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}sculpture de bois{% endblock %}
 {% block stylesheets %}
-<style>
-
-
-/* The grid: Four equal columns that floats next to each other */
-.col {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-{# .galerie {
-  height: 20vh!important;
-} #}
-
-/* Style the images inside the grid */
-.col img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.col img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-</style>
+<link rel="stylesheet" href="{{asset('css/slicebox3d/carving.css')}}">
 
 {% endblock %}
 {% block body %}
 <div class="container-fluid backgroundBruno">		
-
+<div class="d-flex justify-content-center">
+<h1>Les sculpture en Bois</h1>
+</div>
 <div class="row">
 {% for bois in bois %}		
   <div class="col galerie" >
@@ -71,9 +19,9 @@
  
 
 
-<div class="container">
+<div class="container d-flex justify-content-center" style="height:100vh">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:25%">
+  <img  id="expandedImg" style="width:50vh">
   <div id="imgtext"></div>
 </div>
 

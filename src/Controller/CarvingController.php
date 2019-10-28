@@ -7,14 +7,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-    /**
-     * @Route("/carving")
-    */
+
 
 class CarvingController extends AbstractController
 {
     /**
-     * @Route("/", name="carvingwoods")
+     * @return Response
+     * @Route("/woods", name="carvingwoods")
      */
     public function woods(CarvingRepository $carvingRepository): Response
     {
@@ -26,17 +25,18 @@ class CarvingController extends AbstractController
         ])
         ]);
     }
-//     /**
-//      * @Route("/stone", name="carvingwoods")
-//      */
-//     public function stone(CarvingRepository $carvingRepository): Response
-//     {
+    /**
+     * @return Response
+     * @Route("/stone", name="carvingstone")
+     */
+    public function stone(CarvingRepository $carvingRepository): Response
+    {
         
-//         return $this->render('carving/carvingwood.html.twig', [
-//             'controller_name' => 'CarvingController',
-//             'bois' => $carvingRepository->findBy([
-//                 'support'=>'pierre'
-//         ])
-//         ]);
-//     }
+        return $this->render('carving/carvingstone.html.twig', [
+            'controller_name' => 'CarvingController',
+            'bois' => $carvingRepository->findBy([
+                'support'=>'pierre'
+        ])
+        ]);
+    }
  }
