@@ -6,24 +6,25 @@
 
 {% endblock %}
 {% block body %}
-<div class="container-fluid backgroundBruno">		
-<div class="d-flex justify-content-center">
-<h1>Les sculpture en Bois</h1>
-</div>
-<div class="row">
-{% for bois in bois %}		
-  <div class="col galerie" >
-    <img src="{{ asset(bois.img) }}" alt="" style="width:80%; height:30vh" onclick="myFunction(this);">
+<div class="container-fluid backgroundBruno">	
+
+  <div class="d-flex justify-content-center m-5">
+    <h1>Les sculpture en Bois</h1>
   </div>
-{% endfor %}
+
+  <div class="row">
+    {% for bois in bois %}		
+      <div class="col galerie" >
+        <img src="{{ asset(bois.img) }}" alt="" style="width:80%; height:30vh" onclick="myFunction(this);">
+      </div>
+    {% endfor %}
+  </div>
  
-
-
-<div class="container d-flex justify-content-center" style="height:100vh">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img  id="expandedImg" style="width:50vh">
-  <div id="imgtext"></div>
-</div>
+  <div class="container" style="margin:auto; width:50vh">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img  id="expandedImg" style="height:100vh; width:50vh">
+    <div id="imgtext"></div>
+  </div>
 
 <script>
 function myFunction(imgs) {
@@ -36,5 +37,5 @@ function myFunction(imgs) {
 </script>			
 				
 	
-</div>							
+</div><!-- end container fluid -->							
 {% endblock %}

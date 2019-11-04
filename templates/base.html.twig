@@ -29,56 +29,58 @@
         
     </head>
     <body>
-        <header id="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top">
-                <div class="collapse navbar-collapse justify-content-center " id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                 <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ path('home') }}">Accueil</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dessins
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Crayon</a>
-                        <a class="dropdown-item" href="#">Encre</a>
-                        <a class="dropdown-item" href="#">Pastel</a>
-                        <a class="dropdown-item" href="#">Crayon de Couleurs</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
+           
+                 <header id='header'>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                    <a class="nav-link text-white" href="{{ path('home') }}">Turgis Arts Graphiques</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dessins<span class="sr-only">(current)</span></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Crayon</a>
+                                    <a class="dropdown-item" href="#">Encre</a>
+                                    <a class="dropdown-item" href="#">Pastel</a>
+                                    <a class="dropdown-item" href="#">Crayon de Couleurs</a>
+                                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sculptures
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ path('carvingwoods')}}">Bois</a>
-                        <a class="dropdown-item" href="{{ path('carvingstone')}}">Pierre</a>
-                        </div>
-                    </li>
+                                    Sculptures
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ path('carvingwoods')}}">Bois</a>
+                                    <a class="dropdown-item" href="{{ path('carvingstone')}}">Pierre</a>
+                                    </div>
+                </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Peintures
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ path('watercolors_show') }}">Aquarelles&Gouache</a>
-                        <a class="dropdown-item" href="{{ path('classicalOil_show') }}">&Agrave; huile, style classique</a>
-                        <a class="dropdown-item" href="{{ path('fantasticalOil_show') }}">&Agrave; huile, style fantastique</a>
-                        <a class="dropdown-item" href="{{ path('surrealistOil_show') }}">&Agrave; huile, style surréaliste, thérapeutique & portrait</a>
-                        <a class="dropdown-item" href="{{ path('laqueredOil_swhow') }}">Peintures laquées et vitraux</a>
-                        </div>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Oeuvre numérique</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ path('eggs_page') }}">Oeufs décoratifs</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
-                    </li>
-                    </ul>
-                </div>
+                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Peintures
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ path('watercolors_show') }}">Aquarelles&Gouache</a>
+                                    <a class="dropdown-item" href="{{ path('classicalOil_show') }}">&Agrave; huile, style classique</a>
+                                    <a class="dropdown-item" href="{{ path('fantasticalOil_show') }}">&Agrave; huile, style fantastique</a>
+                                    <a class="dropdown-item" href="{{ path('surrealistOil_show') }}">&Agrave; huile, style surréaliste, thérapeutique & portrait</a>
+                                    <a class="dropdown-item" href="{{ path('laqueredOil_swhow') }}">Peintures laquées et vitraux</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="#">Oeuvre numérique</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="{{ path('eggs_page') }}">Oeufs décoratifs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="#">Contact</a>
+                                </li>
+            </div>
             </nav>
         </header>
 
