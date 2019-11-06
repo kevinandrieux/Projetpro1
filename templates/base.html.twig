@@ -87,6 +87,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="#">Contact</a>
                                 </li>
+                                {% if app.user %}
+                     <li class="nav-item">
+                        <a class="nav-link btn-light" href="{{ path('logout') }}">Déconnexion</a>
+                    </li>
+                    {% endif %}
+                    
             </div>
             </nav>
         </header>
@@ -97,7 +103,7 @@
 <footer class="page-footer font-small bg-dark ">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center text-white  py-3">© 2018 Copyright:
+  <div class="footer-copyright text-center text-white  py-3">© 2019 Copyright:
   </div>
   <!-- Copyright -->
 
