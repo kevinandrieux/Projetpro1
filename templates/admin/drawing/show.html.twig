@@ -9,34 +9,34 @@
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ drawing.id }}</td>
+                <td>{{ Drawing.id }}</td>
             </tr>
             <tr>
                 <th>Type</th>
-                <td>{{ drawing.type }}</td>
+                <td>{{ Drawing.type }}</td>
             </tr>
             <tr>
                 <th>Title</th>
-                <td>{{ drawing.title }}</td>
+                <td>{{ Drawing.title }}</td>
             </tr>
             <tr>
                 <th>Description</th>
-                <td>{{ drawing.description }}</td>
+                <td>{{ Drawing.description }}</td>
             </tr>
             <tr>
                 <th>Img</th>
-                <td>{{ drawing.img }}</td>
+                <td>{{ Drawing.img }}</td>
             </tr>
             <tr>
                 <th>Category</th>
-                <td>{{ drawing.category }}</td>
+                <td>{{ Drawing.category }}</td>
             </tr>
         </tbody>
     </table>
 
     <a class="btn btn-primary" href="{{ path('drawing_index') }}">back to list</a>
 
-    <a class="btn btn-danger" href="{{ path('drawing_edit', {'id': drawing.id}) }}">edit</a>
+    <a class="btn btn-danger" href="{{ path('drawing_edit', {'id': Drawing.id}) }}">edit</a>
 
     {{ include('/admin/drawing/_delete_form.html.twig') }}
 {% endblock %}
