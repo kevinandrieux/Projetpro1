@@ -1,10 +1,161 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}sculpture de Pierre{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/slicebox3d/timeline.css')}}">
+<link rel="stylesheet" href="{{asset('css/slicebox3d/lazyload.css')}}">
+
+{% endblock %}
 
 {% block body %}
-{% for pierres in pierre %}
+<div class="container-fluid backgroundBruno">
+  <div class="d-flex justify-content-center m-5">
+      <h1>Les sculptures De Pierres</h1>
+    </div>
 
-{% endfor %}
+
+  <div class="timeline">
+    <div class="container left reveal">
+      <div class="content" >
+      <img  class='reveal-1'src="img/sculptures/sculptures-pierre/pierre1.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre2.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre3.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre4.jpg" style="width:35vw">
+      </div>
+    </div>
+    
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre6.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre7.jpg" style="width:35vw">
+      </div>
+    </div>
+    
+    <div class="container left reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre8.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre9.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre10.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre11.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre12.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre13.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre14.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre15.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre14.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre15.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre16.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre17.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre18.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre19.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre20.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre21.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre22.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre23.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container left reveal">
+      <div class="content" >
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre24.jpg" style="width:35vw">
+      </div>
+    </div>
+    <div class="container right reveal">
+      <div class="content">
+      <img class='reveal-2' src="img/sculptures/sculptures-pierre/pierre25.jpg" style="width:35vw">
+      </div>
+    </div> 
+  </div>
+</div>
+ 
+ <script src="{{asset('js/slicebox3d/lazyload.js')}}"></script>
+
+
+  
+  
+
+
 
 {% endblock %}

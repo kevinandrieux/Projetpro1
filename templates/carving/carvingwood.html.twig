@@ -2,20 +2,20 @@
 
 {% block title %}sculpture de bois{% endblock %}
 {% block stylesheets %}
-<link rel="stylesheet" href="{{asset('css/slicebox3d/carving.css')}}">
+<link rel="stylesheet" href="{{asset('css/slicebox3d/galerie.css')}}">
 
 {% endblock %}
 {% block body %}
 <div class="container-fluid backgroundBruno">	
 
   <div class="d-flex justify-content-center m-5">
-    <h1>Les sculpture en Bois</h1>
+    <h1 class='titredusite'>Les sculptures en Bois</h1>
   </div>
 
   <div class="row">
     {% for bois in bois %}		
       <div class="col galerie" >
-        <img src="{{ asset(bois.img) }}" alt="" style="width:80%; height:30vh" onclick="myFunction(this);">
+        <img class="miniature" src="{{ asset(bois.img) }}" alt="" style="width:80%; height:30vh" onclick="myFunction(this);">
       </div>
     {% endfor %}
   </div>

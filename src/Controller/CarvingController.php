@@ -34,7 +34,7 @@ class CarvingController extends AbstractController
         
         return $this->render('carving/carvingstone.html.twig', [
             'controller_name' => 'CarvingController',
-            'bois' => $carvingRepository->findBy([
+            'pierre' => $carvingRepository->findBy([
                 'support'=>'pierre'
         ])
         ]);

@@ -47,3 +47,15 @@
     font-size: 35px;
     cursor: pointer;
   }
+  .backgroundBruno {
+    padding-bottom: 25vh;
+  }
+  @media screen and (max-width: 768px) {
+    .col{
+      width: 10px!important;
+    }
+    .miniature{
+      width: 8vh!important;
+      height: 20vh!important;
+    }
+  }
