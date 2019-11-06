@@ -49,7 +49,20 @@
     border-radius: 20%;
  
 }
+@media screen and (max-width: 768px) {
+    .titredusite{
+        text-align: center!important;
+        
+    }
+    .presentation{
+        flex-direction: column!important;
 
+    }
+    .carousel1 {
+        height: 58vw!important;
+    }
+   
+}
 
 /* **********************************************************************************
 ********************************* BRUNO'S CSS PART **********************************
