@@ -41,10 +41,11 @@
                         Dessins
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Crayon</a>
-                        <a class="dropdown-item" href="#">Encre</a>
-                        <a class="dropdown-item" href="#">Pastel</a>
-                        <a class="dropdown-item" href="#">Crayon de Couleurs</a>
+                        <a class="dropdown-item" href="{{ path('croquis_show')}}">Crayon, Croquis</a>
+                        <a class="dropdown-item" href="{{ path('china_show')}}">Encre Chine</a>
+                        <a class="dropdown-item" href="{{ path('apod_show')}}"> Encre de chine Apocalypse </a>
+                        <a class="dropdown-item" href="{{ path('fanta_show')}}"> Encre de chine Fantastique </a>
+                        <a class="dropdown-item" href="{{ path('color_show')}}">Crayon de Couleurs</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -68,15 +69,29 @@
                         <a class="dropdown-item" href="{{ path('laqueredOil_swhow') }}">Peintures laquées et vitraux</a>
                         </div>
                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Oeuvre numérique</a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Oeuvres Numèriques
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ path('numarch_show') }}">Numérique Architecture </a>
+                        <a class="dropdown-item" href="{{ path('numerics_show') }}">Numérique</a>
+                        <a class="dropdown-item" href="{{ path('nzywuikx_show') }}">Zywuikx</a>
+                        <a class="dropdown-item" href="{{ path('surrealistOil_show') }}">&Agrave; huile, style surréaliste, thérapeutique & portrait</a>
+                        <a class="dropdown-item" href="{{ path('laqueredOil_swhow') }}">Peintures laquées et vitraux</a>
+                        </div>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="{{ path('eggs_page') }}">Oeufs décoratifs</a>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link text-white" href="#">Contact</a>
                     </li>
+                    {% if app.user %}
+                     <li class="nav-item">
+                        <a class="nav-link btn-light" href="{{ path('logout') }}">Déconnexion</a>
+                    </li>
+                    {% endif %}
                     </ul>
                 </div>
             </nav>

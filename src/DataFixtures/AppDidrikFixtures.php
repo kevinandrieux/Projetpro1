@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Drawing;
+use App\Entity\Numerical;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
@@ -277,6 +278,43 @@ class AppDidrikFixtures extends Fixture
 
             $manager->persist($drawing);
             $drawings[] = $drawing;
+        }
+        // ADD Numerique //
+        //      ADD  Archi   //
+        $numerics = [];
+        for ($na = 1; $na <= 14; $na++) {
+            $numeric = new Numerical();
+            $numeric->setType('Numérique')
+                ->setTitle(' Architecture ' . $na)
+                ->setDescription($faker->text(200))
+                ->setImg('img/numerique/narchitec/narchitec (' . $na . ').jpg');
+
+            $manager->persist($numeric);
+            $numerics[] = $numeric;
+        }
+        //      ADD  Numeriq   //
+        $numerics = [];
+        for ($nu = 1; $nu <= 31; $nu++) {
+            $numeric = new Numerical();
+            $numeric->setType('Numérique')
+                ->setTitle(' Numerique Classique ' . $nu)
+                ->setDescription($faker->text(200))
+                ->setImg('img/numerique/numerique/numerique (' . $nu . ').jpg');
+
+            $manager->persist($numeric);
+            $numerics[] = $numeric;
+        }
+        //      ADD  Zywuikx   //
+        $numerics = [];
+        for ($nz = 1; $nz <= 27; $nz++) {
+            $numeric = new Numerical();
+            $numeric->setType('Numérique')
+                ->setTitle(' Zywuikx ' . $nz)
+                ->setDescription($faker->text(200))
+                ->setImg('img/numerique/zywuikx/zywuikx (' . $nz . ').jpg');
+
+            $manager->persist($numeric);
+            $numerics[] = $numeric;
         }
 
         $manager->flush();

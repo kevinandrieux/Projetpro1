@@ -1,0 +1,83 @@
+
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+      {# <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<script  src="{{ asset('js/script.js') }}"></script> #}
+{% endblock %}
+
+{% block title %}Les dessins 'à l encre de chine '.{% endblock %}
+{% block body %}
+
+    <div class="jumbotronClassicalOil text-white">
+        <div class="text-center">
+            <h1 class="jumbotronTitle">les dessins a l'encre de chine</h1>
+        </div>
+         
+
+
+        <div class="container">
+            <p class="jumbotronTitle explain pt-4">Apocalypse.</p>
+            <p class="jumbotronTitle explain">
+                Dessin illustrant un ouvrage ayant pour titre "La dernière apocalypse  ou  révélation et destin des puissances".
+Sommaire de l'ouvrage</p>
+<p class="jumbotronTitle explain" >
+Livre 1 - La Genèse humaine. (29 chapitres = 377 versets )
+Livre 2 - Révélation faite aux hommes de la finalité. (31 chapitres = 557 versets)
+Livre 3 - Le Divin et son adversaire. (17 chapitres = 211 versets)
+Livre 4 - L’irrémédiable conjonction. (07 chapitres = 113 versets)
+Livre 5 - Les exactions des religieux à travers les idolâtries. (07 chapitres = 83 versets)
+Livre 6 - L’affrontement. (17 chapitres = 191 versets)
+Livre 7 - Destin des puissances, le commencement (5 chapitres = 73 versets)
+
+7 livres – 113 chapitres – 1601 versets.
+            </p>
+        </div><!-- end container -->
+
+    </div><!-- end jumbotron -->
+
+    </div>
+ 
+  
+<div class="container-fluid"><div class="row">
+ <div class="col-12 ">
+
+                                    <div id="carousel" class="carousel slide mt-3 mb-2" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            {% for i in 1..12 %}
+                                                <li data-target=".carousel" data-slide-to="{{ loop.index0 }}" {% if loop.index0 == 0 %} class="active" {% endif %}></li>
+                                            {% endfor %}
+                                        </ol>
+                                        <div class="carousel-inner enlarge">
+                                            {% for i in 1..12 %}
+                                                <div class="carousel-item {% if loop.index0 == 0 %} active {% endif %}">
+                                                    <img class="center-block" src="/img/dessin/apocalypse/apocalyspe ({{ i }}).jpg" width="50%" alt="fantastique {{ i }}">
+                                                    <p>Apocalypse {{ i }}</p>
+                                                </div>
+                                            {% endfor %}        
+                                                 
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a> 
+                                    </div>
+                                </div>                    
+    </div>
+    
+
+
+    
+    
+     
+
+    </div></div>
+
+ 
+
+{% endblock %}
