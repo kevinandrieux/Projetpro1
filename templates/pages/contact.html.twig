@@ -1,0 +1,87 @@
+{% extends 'base.html.twig'%}
+
+{% block title 'Contactez-nous' %}
+
+{% block body %}
+
+    <div class="container-fluid backgroundContact">
+
+        <!-- Contact section -->
+        <div class="container-fluid">
+            <div class="text-banner text-center">
+                <h1 class="text-white my-5">Contactez-nous</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success text-center">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="container form-contact">
+            <div class="row">
+
+                <div class="col-md-4 col-xs-12 mt-1 reveal-up-2"><!-- first column -->
+                    <h2 class="mb-5">Vous souhaitez nous contacter ?</h2>
+                    <p class="text-justify pr-3">
+                        Nous vous remercions de votre intérêt et de votre visite sur notre site.
+                        Nous sommes également à votre écoute pour recevoir vos idées et suggestions éventuelles.
+                        Merci de remplir le formulaire de contact ci-contre et nous reviendrons vers vous le plus tôt possible.
+                    </p>
+                </div><!-- end column -->
+
+                <div class="col-md-4 col-xs-12 mt-1 reveal-up-1"><!-- second column -->
+                    <h2 class="mb-5">Informations de contact</h2>
+                    <ul>
+                        <li class="info-list"><i class="fa fa-home fa-2x"></i>&nbsp; 25 Route de Waben, 62180 Verton.</li>
+                        <br>
+                        <li class="info-list"><i class="fa fa-phone fa-2x"></i>&nbsp; +33 3 21 09 31 60</li>
+                    </ul>
+                </div><!-- end column -->
+
+                <div class="col-md-4 col-xs-12 reveal-up-3"><!-- third column -->
+
+                    {{ form_start(form) }}
+                    <div class="form-group form-group-contact">
+                        <i class="fa fa-user"></i> {{ form_label(form.name, 'Votre nom') }}
+                        {{ form_widget(form.name, {"attr": {
+                            "placeholder" : "Minimum 2 caractères"}}) }}
+                        <small>{{ form_help(form.name) }}</small>
+                    </div>
+                    <div class="validation"></div>
+                    <div class="form-group">
+                        <i class="fa fa-mail-forward"></i> {{ form_label(form.mail) }}
+                        {{ form_widget(form.mail, {"attr": {
+                            "placeholder" : "Saisir un mail valide"}}) }}
+
+                        <small>{{ form_help(form.mail) }}</small>
+                    </div>
+                    <div class="validation"></div>
+                    <div class="form-group">
+                        <i class="fa fa-file-text-o"></i> {{ form_label(form.subject, 'Sujet') }}
+                        {{ form_widget(form.subject, {"attr": {
+                            "placeholder" : "Minimum 4 caractères"}}) }}
+
+                        <small>{{ form_help(form.subject) }}</small>
+                    </div>
+                    <div class="validation"></div>
+                    <div class="form-group">
+                        <i class="fa fa-file-text"></i> {{ form_label(form.message) }}
+                        {{ form_widget(form.message, {"attr": {
+                            "placeholder" : "Minimum 10 caractères"}}) }}
+                        <small>{{ form_help(form.message) }}</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-left text-white">Envoyer le message</button>
+                    {{ form_end(form) }}
+                </div><!-- end column -->
+
+            </div>
+        </div><!-- end contact section / end container -->
+    </div>
+
+       {% block javascripts %}
+    {% endblock %}
+
+{% endblock %}

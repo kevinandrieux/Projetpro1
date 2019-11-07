@@ -77,6 +77,13 @@
     padding: 5vh 9vw 5vh 9vw!important;
     opacity: 0.9;
 }
+.backgroundContact{
+    background-color: #444444;
+    color: white;
+    margin-top: -1vh;
+    padding: 5vh 9vw 5vh 9vw;
+    opacity: 0.9;
+}
 .tableWhite{
     color: #FFFFFF;
 }

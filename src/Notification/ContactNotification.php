@@ -28,10 +28,10 @@ class ContactNotification{
      */
     public function notify(Contact $contact){
 
-        $message = (new \Swift_Message('Contact via le formulaire de la Fédération du Mémorial de l\'OTAN.'))
+        $message = (new \Swift_Message('Contact via le formulaire du site d\'art de Mr Turgis.'))
             //setters
-            ->setFrom('noreply@federation.fr')
-            ->setTo('fmo.nato.contact@gmail.com')## federation mail, receiver
+            ->setFrom('noreply@turgis.fr')
+            ->setTo('didrik.turgis@gmail.com')## mail receiver
             ->setReplyTo($contact->getMail())## the contact email sender by form
 
             ->setBody('
