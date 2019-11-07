@@ -24,6 +24,7 @@ class FormContactType extends AbstractType
     {
         $resolver->setDefaults([
             // Configure your form options here
+            
         ]);
     }
 }

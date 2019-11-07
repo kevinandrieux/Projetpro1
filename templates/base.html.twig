@@ -85,7 +85,7 @@
                                     <a class="nav-link text-white" href="{{ path('eggs_page') }}">Oeufs décoratifs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="#">Contact</a>
+                                    <a class="nav-link text-white" href="{{ path('contact')}}">Contact</a>
                                 </li>
                                 {% if app.user %}
                      <li class="nav-item">
@@ -115,7 +115,7 @@
           <script type="text/javascript">
     //<!--
             {# Javascripts Kevin bloque le clique droit #}
-        {# document.oncontextmenu = new Function("return false"); #}
+        document.oncontextmenu = new Function("return false"); 
     //-->
     </script>
     </body>

@@ -24,7 +24,7 @@
     /* height: 300px;  */
     -webkit-transform-origin: 50% 50%;
     /*  for Safari */
-    transform-origin: 50% 50% -1200px; 
+    transform-origin: 50% 50% -1300px; 
     /*  for all other browsers */
     transition: 1s; 
   } 
@@ -33,7 +33,7 @@
     /* max-width: 500px;  */
     position: absolute; 
     left: 40%;
-    transform-origin: 50% 50% -1200px;
+    transform-origin: 50% 50% -1300px;
     /* outline:1px solid transparent;  */
     overflow: hidden;
     transition: 1s;

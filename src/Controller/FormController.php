@@ -17,5 +17,19 @@ class FormController extends AbstractController
        return $this->render('contact/form.html.twig', [
        'form' => $form,
        'form' => $form->createView(),]);
+        
+        $form->handleRequest($request);
+
+             if ($form->isSubmitted() && $form->isValid()){
+                 /** @var  $contact */
+                 $contactNotification->notify($contact);
+                    $this-> addFlash('Success', 'Votre email a été envoyé');
+                    return $this->redirectToRoute('contact');
+                }
+        return $this->render('contact', [
+             'current_menu' => 'active',
+             'contact' => $contact,
+             'form' => $form->createView(),
+            ]);
     }
 }
