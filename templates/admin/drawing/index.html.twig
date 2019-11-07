@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Drawing index{% endblock %}
+
+{% block body %}
+<div class="container backgroundBruno"style="color: white">
+        <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
+        <div class="text-center">
+                <h1 class="jumbotronTitle titleAdmin">Drawing index</h1>
+        </div>
+         <div class="text-left">
+                <h2 class="jumbotronTitle pt-4">Liste de tous les Dessins</h2>
+        </div>
+<a class='btn btn-secondary float-right mb-5 mt-5' href="{{ path('drawing_new') }}">Ajout d'un nouveau dessin</a>
+ 
+    
+
+    <table class="table">
+        <thead class="tableWhite">
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Img</th>
+                <th>Category</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for drawing in drawings %}
+            <tr style="color: white">
+                <td>{{ drawing.id }}</td>
+                <td>{{ drawing.type }}</td>
+                <td>{{ drawing.title }}</td>
+                <td>{{ drawing.description }}</td>
+                <td><img src="{{ asset(drawing.img) }}"style="width: 10vw"></td>
+                <td>{{ drawing.category }}</td>
+                <td>
+                    <a class="btn btn-success" href="{{ path('drawing_show', {'id': drawing.id}) }}">show</a>
+                    <a class="btn btn-primary" href="{{ path('drawing_edit', {'id': drawing.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+    
+{% endblock %}

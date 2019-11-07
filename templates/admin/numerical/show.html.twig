@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Numerical{% endblock %}
+
+{% block body %}
+    <h1>Numerical</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ numerical.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ numerical.type }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ numerical.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ numerical.description }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ numerical.img }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ numerical.category }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('numerical_index') }}">back to list</a>
+
+    <a href="{{ path('numerical_edit', {'id': numerical.id}) }}">edit</a>
+
+    {{ include('Admin/numerical/_delete_form.html.twig') }}
+{% endblock %}

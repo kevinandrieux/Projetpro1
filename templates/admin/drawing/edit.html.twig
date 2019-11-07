@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Drawing{% endblock %}
+
+{% block body %}
+    <h1>Edit Drawing</h1>
+    <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    {{ include('admin/drawing/_form.html.twig', {'button_label': 'Update'}) }}
+                
+                
+                    <a class="btn btn-success" href="{{ path('drawing_index') }}">back to list</a>
+                    <a class="btn btn-danger" href="{{ path('drawing_delete', {'id': Drawing.id}) }}">Delete</a>
+                
+                </div>
+            </div>
+    </div>
+{% endblock %}

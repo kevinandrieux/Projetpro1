@@ -1,0 +1,100 @@
+
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block title %}Les dessins 'à l encre de chine '.{% endblock %}
+{% block body %}
+
+    <div class="jumbotronClassicalOil text-white">
+        <div class="text-center">
+            <h1 class="jumbotronTitle">les dessins a l'encre de chine</h1>
+        </div>
+         
+
+
+        <div class="container">
+            <p class="jumbotronTitle explain pt-4">Fantastique</p>
+            <p class="jumbotronTitle explain">
+                Encre de Chine - Composition en forme de pain, ou bâton de plusieurs figures, orné de tous les côtés d’une impression de figures d’animaux du pays, et autres figures. La meilleure qui vient de la Chine est d’un noir velouté un peu roussâtre, et assez dure à détremper ; on en contrefait en Hollande et à Paris, mais il s’en faut beaucoup qu’elle soit ni si belle, ni si bonne que celle de la Chine, elle n’est pas même si dure, se détrempant facilement, ce qui la rend plus commune et meilleure marché que la véritable.
+
+(Buchotte – les règles du dessin et du lavis – 1722)
+            </p>
+        </div><!-- end container -->
+   
+
+    </div><!-- end jumbotron -->
+
+    </div>
+ 
+  
+<div class="container"><div class="row">
+
+
+<table class="table">
+        <tr>
+            
+            <td class="text-align-center" style="width:50wh; ">  <div id="carousel" class="carousel slide mt-3 mb-2" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            {% for i in 1..13 %}
+                                                <li data-target=".carousel" data-slide-to="{{ loop.index0 }}" {% if loop.index0 == 0 %} class="active" {% endif %}></li>
+                                            {% endfor %}
+                                        </ol>
+                                        <div class="carousel-inner caption">
+                                            {% for i in 1..13 %}
+                                                <div class="carousel-item {% if loop.index0 == 0 %} active {% endif %}">
+                                                    <img class="center-block" src="/img/dessin/architecdivers/architecdivers ({{ i }}).jpg" width="50%" alt="fantastique {{ i }}">
+                                                    <p>Architectures Diverses {{ i }}</p>
+                                                </div>
+                                            {% endfor %}        
+                                                 
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a></div></div> </td>
+            <td class="text-align-center" style="width: 50wh" > <div id="carousel2" class="carousel slide mt-3 mb-2" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            {% for j in 1..6 %}
+                                                <li data-target=".carousel" data-slide-to="{{ loop.index0 }}" {% if loop.index0 == 0 %} class="active" {% endif %}></li>
+                                            {% endfor %}
+                                        </ol>
+                                        <div class="carousel-inner enlarge">
+                                            {% for j in 1..6 %}
+                                                <div class="carousel-item {% if loop.index0 == 0 %} active {% endif %}">
+                                                    <img class="center-block" src="/img/dessin/architecfanta/architecfanta ({{ j }}).jpg" width="50%" alt="architecfanta{{ j }}">
+                                                    <p>Architecture Fantastique {{ j }}</p>
+                                                </div>
+                                            {% endfor %}         
+                                                 
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carousel2" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel2" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a> 
+                                    </div>
+                                </div>      </td>
+       
+        </tr>
+   
+</table>
+           
+</div>    
+    
+     
+
+    </div></div>
+
+ 
+
+{% endblock %}

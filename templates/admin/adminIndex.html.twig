@@ -16,7 +16,7 @@
 
     <!--------------- section choice ------------------------>
 
-    <div class="counter container">
+    <div class="counter container backgroundBruno">
         <div class="counter-row">
             <div class="counter-column ">
                 <div class="counter-card effect-chico">
@@ -31,10 +31,16 @@
                         <p><i class="counter-fa fas fa-egg"></i></p><h4 class="text-white">Gérer les oeufs</h4></a>
                 </div>
             </div>
+            <div class="counter-column">
+                <div class="counter-card effect-chico">
+                    <a href="{{ path('numerical_index') }}">
+                        <p><i class="counter-fa fas fa-draw-polygon"></i></p><h4 class="text-white">Gérer les numeriques</h4></a>
+                </div>
+            </div>
 
             <div class="counter-column ">
                 <div class="counter-card effect-chico">
-                    <a href="#">
+                    <a href="{{ path('drawing_index' )}}">
                         <p><i class="counter-fa fas fa-pencil-alt"></i></p><h4 class="text-white">Gérer les dessins</h4></a>
                 </div>
             </div>

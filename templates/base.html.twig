@@ -43,11 +43,12 @@
                     <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Dessins<span class="sr-only">(current)</span></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Crayon</a>
-                                    <a class="dropdown-item" href="#">Encre</a>
-                                    <a class="dropdown-item" href="#">Pastel</a>
-                                    <a class="dropdown-item" href="#">Crayon de Couleurs</a>
-                                    </div>
+                        <a class="dropdown-item" href="{{ path('croquis_show')}}">Crayon, Croquis</a>
+                        <a class="dropdown-item" href="{{ path('china_show')}}">Encre Chine</a>
+                        <a class="dropdown-item" href="{{ path('apod_show')}}"> Encre de chine Apocalypse </a>
+                        <a class="dropdown-item" href="{{ path('fanta_show')}}"> Encre de chine Fantastique </a>
+                        <a class="dropdown-item" href="{{ path('color_show')}}">Crayon de Couleurs</a>
+                        </div>
                 </li>
                 
                 <li class="nav-item dropdown">
@@ -72,25 +73,49 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="#">Oeuvre numérique</a>
-                                </li>
+<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Oeuvres Numèriques
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ path('numarch_show') }}">Numérique Architecture </a>
+                        <a class="dropdown-item" href="{{ path('numerics_show') }}">Numérique</a>
+                        <a class="dropdown-item" href="{{ path('nzywuikx_show') }}">Zywuikx</a>
+                                                        </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="{{ path('eggs_page') }}">Oeufs décoratifs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="#">Contact</a>
+                                    <a class="nav-link text-white" href="{{ path('contact')}}">Contact</a>
                                 </li>
+                                {% if app.user %}
+                     <li class="nav-item">
+                        <a class="nav-link btn-light" href="{{ path('logout') }}">Déconnexion</a>
+                    </li>
+                    {% endif %}
+                    
             </div>
             </nav>
         </header>
 
         {% block body %}{% endblock %}
+
+        <!-- Footer -->
+<footer class="page-footer font-small bg-dark ">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-white  py-3">© 2019 Copyright:
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
         {% block javascripts %}{% endblock %}
         
           <script type="text/javascript">
     //<!--
             {# Javascripts Kevin bloque le clique droit #}
-        {# document.oncontextmenu = new Function("return false"); #}
+        document.oncontextmenu = new Function("return false"); 
     //-->
     </script>
     </body>

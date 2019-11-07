@@ -2,20 +2,26 @@
 
 {% block title %}sculpture de bois{% endblock %}
 {% block stylesheets %}
-<link rel="stylesheet" href="{{asset('css/slicebox3d/carving.css')}}">
+<link rel="stylesheet" href="{{asset('css/slicebox3d/galerie.css')}}">
 
 {% endblock %}
 {% block body %}
 <div class="container-fluid backgroundBruno">	
 
   <div class="d-flex justify-content-center m-5">
-    <h1>Les sculpture en Bois</h1>
+    <h1 class='titredusite'>Les sculptures en Bois</h1>
   </div>
+   <div class="d-flex justity-content-center m-5">
+    <p class='text-center'>La sculpture a toujours gardé ce côté mystérieux, car se rapprochant du réel palpable, avec les représentations humaines et le bestiaire fantastique ne firent qu’alimenter cette approche.
+    L’essence de la chose sculptée doit atteindre son but par la vibration qu’elle dégage, même si ce n’est qu’un rayonnement fugitif, elle existe par son authenticité, peu importe le matériau utilisé.
+    Le bois a ses contraintes, l’essence de l’arbre, l’âge, et le fil du bois, mais apporte une certaine chaleur lorsque l’on caresse les formes. Le bois semble toujours apporté une sensation plus douce.
+    </p>
+    </div>
 
   <div class="row">
     {% for bois in bois %}		
       <div class="col galerie" >
-        <img src="{{ asset(bois.img) }}" alt="" style="width:80%; height:30vh" onclick="myFunction(this);">
+        <img class="miniature" src="{{ asset(bois.img) }}" alt="" style="width:80%; height:30vh" onclick="myFunction(this);">
       </div>
     {% endfor %}
   </div>

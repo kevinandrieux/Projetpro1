@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+      <link rel="stylesheet" href="{{ asset('css/3D_carousel/3dcar3.css') }}">
+
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+      
+{% endblock %}
+
+{% block title %}Les Oeuvres Numériques .{% endblock %}
+{% block body %}
+
+    <div class="jumbotronClassicalOil text-white">
+        <div class="text-center">
+            <h1 class="jumbotronTitle">Les Oeuvres Numèriques</h1>
+        </div>
+         {#  #}
+
+
+        <div class="container">
+            <p class="jumbotronTitle explain pt-4">Oeuvres Architecturales .</p>
+            <p class="jumbotronTitle explain">
+               ces Oeuvres sont faits a partir de différents lieux de la region.
+            </p>
+        </div><!-- end container -->
+
+    </div><!-- end jumbotron -->
+
+    </div>
+
+<div id="carousel">
+<figure id="spinner">
+{% for nc in 1..31 %}
+<figure>
+  <img src="/img/numerique/numerique/numerique ({{ nc }}).jpg" alt="">
+    <figcaption> Oeuvres Numeriques  {{ nc }}</figcaption>
+</figure>
+{% endfor %}
+</figure>
+</div>
+<span style=float:left class=ss-icon onclick="galleryspin('-')">&lt;</span>
+<span style=float:right class=ss-icon onclick="galleryspin('')">&gt;</span>
+
+    <script src="{{ asset('js/3D_carousel/3dcar2.js') }}"></script>
+
+ {% endblock %}

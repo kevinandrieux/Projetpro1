@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Drawing{% endblock %}
+
+{% block body %}
+    <h1>Drawing</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ Drawing.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ Drawing.type }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ Drawing.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ Drawing.description }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ Drawing.img }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ Drawing.category }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path('drawing_index') }}">back to list</a>
+
+    <a class="btn btn-danger" href="{{ path('drawing_edit', {'id': Drawing.id}) }}">edit</a>
+
+    {{ include('/admin/drawing/_delete_form.html.twig') }}
+{% endblock %}
+

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Numerical index{% endblock %}
+
+{% block body %}
+<div class="container backgroundBruno"style="color: white">
+        <a class="btn btn-secondary mt-5 float-right" href="{{ path('indexAdministration') }}">Retour à l'accueil administration</a>
+        <a class="btn btn-secondary text-right" href="{{ path('numerical_new') }}">Create new</a>
+        <div class="text-center">
+                <h1 class="jumbotronTitle titleAdmin">Numeric index</h1>
+        </div>
+         <div class="text-left">
+                <h2 class="jumbotronTitle pt-4 text-left">Liste de tous les Oeuvres Numeriques</h2>
+        </div>
+
+    
+
+    <table class="tableWhite">
+        <thead class="tableWhite">
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Img</th>
+                <th>Category</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for numerical in numericals %}
+            <tr class="tableWhite">
+                <td>{{ numerical.id }}</td>
+                <td>{{ numerical.type }}</td>
+                <td>{{ numerical.title }}</td>
+                <td>{{ numerical.description }}</td>
+                <td><img src="{{ asset(numerical.img) }}" style="width: 10vw" ></td>
+                <td>{{ numerical.category }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('numerical_show', {'id': numerical.id}) }}">show</a>
+                    <a class="btn btn-success" href="{{ path('numerical_edit', {'id': numerical.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
