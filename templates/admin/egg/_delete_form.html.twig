@@ -1,3 +1,7 @@
+
+{# Le code de cette page fut réalisé par Bruno Prédot - 11/2019
+created by Prédot Bruno - 11/2019 #}
+
 <form method="post" action="{{ path('egg_delete', {'id': egg.id}) }}" onsubmit="return confirm('Etes-vous sûr de vouloir supprimer ?');">
     <input type="hidden" name="_method" value="DELETE">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ egg.id) }}">

@@ -1,4 +1,9 @@
 <?php
+declare(strict_types=1);
+
+/* Le code de cette page fut réalisé par Bruno Prédot - 11/2019
+created by Prédot Bruno - 11/2019 */
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
